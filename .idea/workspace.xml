@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sablona.html" beforeDir="false" afterPath="$PROJECT_DIR$/sablona.html" afterDir="false" />
@@ -73,15 +72,25 @@
       <updated>1603541257558</updated>
       <workItem from="1603541258623" duration="12117000" />
       <workItem from="1603608989994" duration="10341000" />
-      <workItem from="1603623312419" duration="12081000" />
+      <workItem from="1603623312419" duration="12183000" />
+      <workItem from="1603644363364" duration="3040000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1603644233193</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603644233193</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="735" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603626853344">
@@ -92,6 +101,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603541369505" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1603644209912">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603644209912" />
     <state x="838" y="438" key="Github.ShareDialog" timestamp="1603641948089">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -104,6 +117,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1603626171299" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603644238028">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603644238028" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603626162226">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

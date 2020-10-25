@@ -69,27 +69,37 @@ a:hover {
 
 
 .image {
-    background-position: center;
+    overflow: auto;
     margin: 20px;
     left: 15%;
     width: 35%;
     height: 40vh;
     display: inline-block;
     position: relative;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid black ;
 }
 
+p {
+    display: table;
+    margin: 20px;
+}
+
+.text {
+    background-image: none;
+    background-color: white;
+}
+
 @media only screen and (max-width: 900px) {
     .image {
         width: 50%;
-        left: 25%;
+        left: 15%;
     }
     .header {
         position: absolute;
     }
-
 }
 
 .gulas1 {

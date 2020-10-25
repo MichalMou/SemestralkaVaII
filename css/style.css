@@ -1,0 +1,134 @@
+body {
+    background-image: url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+li {
+
+    display: inline-block;
+    font-size: 30px;
+    background-size: 400px;
+    background-color: rgb(43, 43, 43);
+    padding: 15px;
+}
+
+ul {
+    width: max-content;
+    margin: auto;
+}
+
+ul li ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul ul li {
+    display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+a:hover {
+    color: aqua;
+}
+
+.header {
+    z-index: 1;
+    position: fixed;
+    line-height: 20px;
+    height: 60px;
+    width: 100vw;
+    background-color: rgb(43, 43, 43);
+    border-bottom: 2px solid black;
+}
+
+.gallery {
+    /* dorobit responzivny dizajn */
+    background-color: rgba(43, 43, 43, 0.3);
+    position: relative;
+    top: 100px;
+    left: 10%;
+    width: 80%;
+}
+
+.image {
+    margin: 20px;
+    width: 70%;
+    left: 15%;
+    height: 40vh;
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black ;
+}
+
+.gulas1 {
+    background-image: url("../image/gulas1.jpg") ;
+}
+.gulas2 {
+    background-image: url("../image/gulas2.jpg") ;
+}
+.gulas3 {
+    background-image: url("../image/gulas3.jpg") ;
+}
+.gulas4 {
+    background-image: url("../image/gulas4.jpg") ;
+}
+.gulas5 {
+    background-image: url("../image/gulas5.jpg") ;
+}
+.gulas6 {
+    background-image: url("../image/gulas6.jpg") ;
+}
+
+.losos1 {
+    background-image: url("../image/losos1.jpg");
+}
+.losos2 {
+    background-image: url("../image/losos2.jpg");
+}
+.losos3 {
+    background-image: url("../image/losos3.jpg");
+}
+.losos4 {
+    background-image: url("../image/losos4.jpg");
+}
+.losos5 {
+    background-image: url("../image/losos5.jpg");
+}
+.losos6 {
+    background-image: url("../image/losos6.jpg");
+}
+
+.kari1 {
+    background-image: url("../image/kari1.jpg");
+}
+.kari2 {
+    background-image: url("../image/kari2.jpg");
+}
+.kari3 {
+    background-image: url("../image/kari3.jpg");
+}
+.kari4 {
+    background-image: url("../image/kari4.jpg");
+}
+.kari5 {
+    background-image: url("../image/kari5.jpg");
+}

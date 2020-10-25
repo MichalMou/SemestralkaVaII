@@ -67,10 +67,12 @@ a:hover {
     width: 80%;
 }
 
+
 .image {
+    background-position: center;
     margin: 20px;
-    width: 70%;
     left: 15%;
+    width: 35%;
     height: 40vh;
     display: inline-block;
     position: relative;
@@ -79,8 +81,19 @@ a:hover {
     border: 1px solid black ;
 }
 
+@media only screen and (max-width: 900px) {
+    .image {
+        width: 50%;
+        left: 25%;
+    }
+    .header {
+        position: absolute;
+    }
+
+}
+
 .gulas1 {
-    background-image: url("../image/gulas1.jpg") ;
+    background-image: url("../image/gulas1.jpg");
 }
 .gulas2 {
     background-image: url("../image/gulas2.jpg") ;

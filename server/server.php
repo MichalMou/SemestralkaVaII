@@ -121,9 +121,6 @@ function editAccount($link){
             }
         }
     }
-
-
-
 }
 
 function deleteAccount($link){

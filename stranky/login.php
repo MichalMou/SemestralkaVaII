@@ -61,7 +61,7 @@ include "../server/server.php"
         <div class="gallery">
             <form class="form-signin" method="post" action="<?php login($link); ?>">
                 <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
-                <input type="login" id="inputLogin" class="form-control" placeholder="Username" required autofocus name="username">
+                <input type="text" id="inputLogin" class="form-control" placeholder="Username" required autofocus name="username">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="loginPassword">
                 <div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">login</button>

@@ -77,7 +77,7 @@ function login($link){
         $results = mysqli_query($link, $query);
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['login'] = $login;
-            header("location: home.php");
+            header("location: home.php?");
             exit();
         }
     }
@@ -85,15 +85,16 @@ function login($link){
 
 function editAccount($link){
     if (isset($_POST['edit'])) {
+
         $newLogin = mysqli_real_escape_string($link, $_POST['newUsername']);
         $newEmail = mysqli_real_escape_string($link, $_POST['newEmail']);
         $newPassword = mysqli_real_escape_string($link, $_POST['newPassword']);
-        $oldUsername = mysqli_real_escape_string(_SESSION['username']);
+        $oldUsername = mysqli_real_escape_string($link, $_SESSION['login']);
 
         //find id of account to delete
-        $query = "SELECT id FROM account WHERE login='$oldUsername' ";
+        $query = "SELECT * FROM account WHERE login='$oldUsername' ";
         $user = mysqli_query($link, $query);
-        $id = $user['id'];
+        $id = $user['ID'];
 
         //controll of occupied acc name or email
         $user_check_query = "SELECT * FROM account WHERE login='$newLogin' OR email='$newEmail' LIMIT 1";
@@ -110,6 +111,7 @@ function editAccount($link){
                 array_push($errors, "email already exists");
             }
         }
+
         //controll of errors
         if (count($errors) == 0) {
             $query = "UPDATE account SET login='$newLogin' email='$newEmail' password='$newPassword' WHERE id='$id' ";

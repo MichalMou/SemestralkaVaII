@@ -70,6 +70,12 @@ include "../server/server.php";
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="register">Edit</button>
         </div>
     </form>
+
+    <form class="form-signin" method="post" action="<?php deleteAccount($link);  ?>">
+        <div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="Delete account">Edit</button>
+        </div>
+    </form>
 </div>
 </body>
 </html>

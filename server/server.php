@@ -69,9 +69,9 @@ function register($link)
 }
 
 function login($link){
-    if (isset($_POST['login'])) {
+    if (isset($_POST['username'])) {
         $login = mysqli_real_escape_string($link, $_POST['username']);
-        $password = mysqli_real_escape_string($link, $_POST['LoginPassword']);
+        $password = mysqli_real_escape_string($link, $_POST['loginPassword']);
         $encryptedPassword = md5($password);
         $query = "SELECT * FROM account WHERE login='$login' AND password='$encryptedPassword'";
         $results = mysqli_query($link, $query);

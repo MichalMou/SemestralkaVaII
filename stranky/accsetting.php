@@ -55,8 +55,8 @@ include "../server/server.php"
               <li><a class="nav-link" href="register.php">register</a> </li>
           </ul>
 
-          <div>
-
+      </div>
+      <div class="gallery">
           <form class="form-signin" method="post" action="<?php register($link);  ?>">
               <h1 class="h3 mb-3 font-weight-normal">Register</h1>
               <input type="text" id="inputLogin" class="form-control" placeholder="Login" required autofocus name="login">

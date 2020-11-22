@@ -85,16 +85,18 @@ function login($link){
 
 function editAccount($link){
     if (isset($_POST['edit'])) {
-
+        $errors = array();
         $newLogin = mysqli_real_escape_string($link, $_POST['newUsername']);
         $newEmail = mysqli_real_escape_string($link, $_POST['newEmail']);
         $newPassword = mysqli_real_escape_string($link, $_POST['newPassword']);
         $oldUsername = mysqli_real_escape_string($link, $_SESSION['login']);
+        $newPassword = md5($newPassword);
 
         //find id of account to delete
-        $query = "SELECT * FROM account WHERE login='$oldUsername' ";
+        $query = "SELECT ID FROM account WHERE login='$oldUsername'";
         $user = mysqli_query($link, $query);
-        $id = $user['ID'];
+        $data = mysqli_fetch_assoc($user);
+        $id = $data["ID"];
 
         //controll of occupied acc name or email
         $user_check_query = "SELECT * FROM account WHERE login='$newLogin' OR email='$newEmail' LIMIT 1";
@@ -114,9 +116,9 @@ function editAccount($link){
 
         //controll of errors
         if (count($errors) == 0) {
-            $query = "UPDATE account SET login='$newLogin' email='$newEmail' password='$newPassword' WHERE id='$id' ";
+            $query = "UPDATE account SET login='$newLogin' ,email='$newEmail' ,password='$newPassword' WHERE id='$id' ";
             $results = mysqli_query($link, $query);
-            if (mysqli_num_rows($results) == 1) {
+            if (mysqli_affected_rows($link) == 1) {
                 $_SESSION['login'] = $newLogin;
                 header("location: home.php");
                 exit();
@@ -126,16 +128,20 @@ function editAccount($link){
 }
 
 function deleteAccount($link){
-    $username = mysqli_real_escape_string(_SESSION['username']);
-    $query = "SELECT id FROM account WHERE login='$username' ";
-    $user = mysqli_query($link, $query);
-    $id = $user['id'];
+    if (isset($_POST['delete'])) {
+        $username = mysqli_real_escape_string($link, $_SESSION['login']);
+        $query = "SELECT ID FROM account WHERE login='$username'";
+        $user = mysqli_query($link, $query);
+        $data = mysqli_fetch_assoc($user);
+        $id = $data["ID"];
 
-    $query = "DELETE FROM account WHERE id='$id' ";
-    $result = mysqli_query($link, $query);
-    if($result === True){
-        session_reset();
-        header("location: home.php");
-        exit;
+        $query = "DELETE FROM account WHERE ID='$id'";
+        $result = mysqli_query($link, $query);
+
+        if(mysqli_affected_rows($link) > 0){
+            session_reset();
+            header("location: home.php");
+            exit();
+        }
     }
 }

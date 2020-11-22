@@ -63,7 +63,7 @@ include "../server/server.php";
 <div class="gallery">
     <form class="form-signin" method="post" action="<?php editAccount($link);  ?>">
         <h1 class="h3 mb-3 font-weight-normal">Edit</h1>
-        <input type="text" id="inputLogin" class="form-control" placeholder="Nick" required autofocus name="newNick">
+        <input type="text" id="inputLogin" class="form-control" placeholder="Nick" required autofocus name="newUsername">
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="newEmail">
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="newPassword">
         <div>
@@ -73,7 +73,7 @@ include "../server/server.php";
 
     <form class="form-signin" method="post" action="<?php deleteAccount($link);  ?>">
         <div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" name="Delete account">Edit</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="delete">Delete Account</button>
         </div>
     </form>
 </div>

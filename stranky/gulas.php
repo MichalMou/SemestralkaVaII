@@ -17,18 +17,7 @@ include "../server/server.php"
 <?php include('../header/header.php'); ?>
 
         <div class="gallery">
-            <div class="image gulas1">
-            </div>
-            <div class="image gulas2">
-            </div>
-            <div class="image gulas3">
-            </div>
-            <div class="image gulas4">
-            </div>
-            <div class="image gulas5">
-            </div>
-            <div class="image gulas6">
-            </div>
+            <?php getObrazok($link,1); ?>
 
         </div>
     </body>

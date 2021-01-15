@@ -156,14 +156,29 @@ function logout(){
     }
 }
 
-function getObrazok($link) {
-    $sql = "SELECT nazov,adressa FROM obrazky";
-    $result = $link->query($sql);
+function getObrazok($link, $typ) {
+    $query = "SELECT * FROM obrazky";
+    $result = mysqli_query($link, $query);
 
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
+    $i = 0;
+    if (mysqli_num_rows($result) > 0) {
+        while($i < mysqli_num_rows($result)){
+            $i++;
+            $row = mysqli_fetch_array($result);
+
             // zobrazovanie obrazkov
-            echo "";
+            if ($row['typ'] == $typ){
+                $img_adr = $row['adresa'];
+                $img_nazov = $row['nazov'];
+
+                echo "
+                    <div class='image' >
+                        <img src=" . $img_adr . " />
+                    </div>
+                ";
+            }
+
+
         }
     }
 

@@ -18,7 +18,7 @@
 
         <div class="gallery">
             <form class="form-signin" method="post" action="<?php register($link);  ?>">
-                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                <h1 class="h3 mb-3 font-weight-normal">Registrácia</h1>
                 <input type="text" id="inputLogin" class="form-control" placeholder="Nick" required autofocus name="nick">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="email">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password">

@@ -73,14 +73,20 @@ a:hover {
     overflow: auto;
     margin: 20px;
     left: 15%;
-    width: 35%;
-    height: 40vh;
+    max-width: 35%;
+    max-height: 40vh;
     display: inline-block;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid black ;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 p {
@@ -93,9 +99,13 @@ p {
     background-color: white;
 }
 
+.textCent {
+    text-align: center;
+}
+
 @media only screen and (max-width: 900px) {
     .image {
-        width: 80%;
+        max-width: 80%;
         left: 5%;
     }
     .header {
@@ -135,49 +145,6 @@ p {
 
 .hidden {
     visibility: hidden;
-}
-
-
-
-
-
-
-.gulas1 {
-    background-image: url("../image/gulas1.jpg");
-}
-.gulas2 {
-    background-image: url("../image/gulas2.jpg") ;
-}
-.gulas3 {
-    background-image: url("../image/gulas3.jpg") ;
-}
-.gulas4 {
-    background-image: url("../image/gulas4.jpg") ;
-}
-.gulas5 {
-    background-image: url("../image/gulas5.jpg") ;
-}
-.gulas6 {
-    background-image: url("../image/gulas6.jpg") ;
-}
-
-.losos1 {
-    background-image: url("../image/losos1.jpg");
-}
-.losos2 {
-    background-image: url("../image/losos2.jpg");
-}
-.losos3 {
-    background-image: url("../image/losos3.jpg");
-}
-.losos4 {
-    background-image: url("../image/losos4.jpg");
-}
-.losos5 {
-    background-image: url("../image/losos5.jpg");
-}
-.losos6 {
-    background-image: url("../image/losos6.jpg");
 }
 
 .kari1 {

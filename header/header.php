@@ -39,6 +39,7 @@
             <li><a class="nav-link <?php if ($_SESSION['login'] != ""){echo "hidden";} ?> " href="../stranky/login.php">login</a> </li>
             <li><a class="nav-link <?php if ($_SESSION['login'] != ""){echo "hidden";} ?> " href="../stranky/register.php">register</a> </li>
             <li><a class="nav-link <?php if ($_SESSION['login'] != ""){echo "hidden";} ?>" href="../stranky/edit.php">edit</a> </li>
+            <li><a class="nav-link <?php if ($_SESSION['login'] == ""){echo "hidden";} ?>" href="../stranky/logout.php">logout</a> </li>
         </ul>
 
     </div>

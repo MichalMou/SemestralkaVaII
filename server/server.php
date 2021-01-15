@@ -147,3 +147,24 @@ function deleteAccount($link){
         }
     }
 }
+
+function logout(){
+    if(isset($_POST['logout'])){
+        $_SESSION['login'] = "";
+        header("location: home.php?");
+        exit();
+    }
+}
+
+function getObrazok($link) {
+    $sql = "SELECT nazov,adressa FROM obrazky";
+    $result = $link->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            // zobrazovanie obrazkov
+            echo "";
+        }
+    }
+
+}

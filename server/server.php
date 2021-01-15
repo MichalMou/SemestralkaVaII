@@ -183,3 +183,22 @@ function getObrazok($link, $typ) {
     }
 
 }
+
+
+function pridajObrazok($link) {
+    if(isset($_POST['pridajObrazok'])){
+        $adresa = mysqli_real_escape_string($link, $_POST['adresa']);
+        $typObr = $_POST['typObr'];
+        $obrazok = $_FILES['pridanyObrazok'];
+
+        if (empty($obrazok)) {
+            array_push($errors,"Zadaj obrazok");
+        }
+        if (empty($typObr)){
+            array_push($errors,"Zadaj typ obrazku");
+        }
+
+
+    }
+
+}

@@ -16,17 +16,16 @@ include "../server/server.php"
 <body>
 <?php include('../header/header.php'); ?>
 <div class="gallery">
-    <form class="form-signin" method="post" action="<?php login($link); ?>">
+    <form class="form-signin" method="post" action="<?php pridajObrazok($link); ?>">
         <h1 class="h3 mb-3 font-weight-normal textCent">Pridaj obrázok</h1>
         <input type="file" accept="image/jpeg" class="form-control" name="pridanyObrazok">
-        <input type="text" id="inputLogin" class="form-control" placeholder="nazov" required autofocus name="username">
-        <input type="text" id="inputLogin" class="form-control" placeholder="adresa" required name="loginPassword">
 
-        <input type="radio" id="gulas" name="gender" value="male">
+
+        <input type="radio" name="typObr" value="gulas">
         <label for="gulas">Gulas</label><br>
-        <input type="radio" id="kari" name="gender" value="female">
+        <input type="radio" name="typObr" value="kari">
         <label for="kari">Kari</label><br>
-        <input type="radio" id="losos" name="gender" value="other">
+        <input type="radio" name="typObr" value="losos">
         <label for="losos">Losos</label>
 
         <div>

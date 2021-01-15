@@ -23,8 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/header/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/serverConnect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/accsetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/accsetting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/gulas.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/gulas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/kari.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/kari.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/losos.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/losos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProblemsViewState">
     <hideBySeverity>
       <option value="15" />
@@ -72,17 +83,28 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.grazie" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Michal\Desktop\VAII\image" />
-      <recent name="C:\Users\Michal\Desktop\VAII\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michal\Desktop\VAII\css" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\VAII\header" />
+      <recent name="C:\Users\Michal\Desktop\VAII\image" />
+      <recent name="C:\Users\Michal\Desktop\VAII\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="home.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/VAII/stranky/home.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.home.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,7 +119,15 @@
       <workItem from="1603623312419" duration="12183000" />
       <workItem from="1603644363364" duration="3110000" />
       <workItem from="1606118714119" duration="172000" />
-      <workItem from="1606119015632" duration="347000" />
+      <workItem from="1606119015632" duration="1925000" />
+      <workItem from="1606723720488" duration="193000" />
+      <workItem from="1610535125002" duration="3923000" />
+      <workItem from="1610560720748" duration="217000" />
+      <workItem from="1610561012820" duration="599000" />
+      <workItem from="1610634855998" duration="1089000" />
+      <workItem from="1610636887326" duration="2265000" />
+      <workItem from="1610642422142" duration="4316000" />
+      <workItem from="1610704704375" duration="1135000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -155,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606079409360</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <created>1606119629039</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606119629039</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +227,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="475" y="75" key="#PHP" timestamp="1606119379763">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="475" y="75" key="#PHP/0.0.1536.864@0.0.1536.864" timestamp="1606119379763" />
     <state x="735" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603626853344">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -230,18 +271,28 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606079415527" />
-    <state x="461" y="185" key="SettingsEditor" timestamp="1603626171299">
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1610560760355">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1603626171299" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606079410767">
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1610560760355" />
+    <state x="461" y="185" key="SettingsEditor" timestamp="1610641772499">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1606079410767" />
+    <state x="369" y="148" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606119400160" />
+    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610641772499" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610556555204">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="442" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606119631283" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610556555204" />
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606071365009">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606071365009" />
+    <state x="666" y="308" width="585" height="772" key="find.popup" timestamp="1610642616607">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="666" y="308" width="585" height="772" key="find.popup/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610642616607" />
     <state x="774" y="434" key="git4idea.ui.GitResetDialog" timestamp="1606069948231">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

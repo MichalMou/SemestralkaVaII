@@ -133,6 +133,15 @@ p {
     border-top-right-radius: 0;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+
+
+
+
+
 .gulas1 {
     background-image: url("../image/gulas1.jpg");
 }

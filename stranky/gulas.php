@@ -1,3 +1,6 @@
+<?php
+include "../server/server.php"
+?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -11,50 +14,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="home.php">HOME</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExample05">
-        <ul class="navbar-nav mr-auto">
-            <li><a class="nav-link" href="home.php">Hlavné jedlá</a>
-                <ul>
-                    <li><a href="gulas.php">Hovädzí guláš</a></li>
-                    <li><a href="kari.php">Kari kura</a></li>
-                    <li><a href="losos.php">Grilovaný losos</a></li>
-                </ul>
-            </li>
-            <li><a class="nav-link" href="home.php">Nápoje</a>
-                <ul>
-                    <li><a href="#">Kofola</a></li>
-                    <li><a href="#">Pivo</a></li>
-                    <li><a href="#">Káva</a></li>
-                </ul>
-            </li>
-            <li><a class="nav-link" href="home.php">Nápoje</a>
-                <ul>
-                    <li><a href="#">Kofola</a></li>
-                    <li><a href="#">Pivo</a></li>
-                    <li><a href="#">Káva</a></li>
-                </ul>
-            </li>
-
-            <li><a class="nav-link" href="home.php">Dezerty</a>
-                <ul>
-                    <li><a href="#">Zmrzlina</a></li>
-                    <li><a href="#">Palacinky</a></li>
-                    <li><a href="#">Štrúdľa</a></li>
-                </ul>
-            </li>
-            <li><a class="nav-link" href="login.php">login</a> </li>
-            <li><a class="nav-link" href="register.php">register</a> </li>
-            <li><a class="nav-link" href="edit.php">edit</a> </li>
-        </ul>
-
-    </div>
-</nav>
+<?php include('../header/header.php'); ?>
 
         <div class="gallery">
             <div class="image gulas1">

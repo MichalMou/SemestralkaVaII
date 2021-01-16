@@ -21,7 +21,8 @@ include "../server/server.php"
 <body>
 <?php include('../header/header.php'); ?>
 <div class="gallery">
-    <div class="article text">
+    <div class="article text textCent">
+        <h1>Kari kura</h1>
         <p>
             Na rozpálenom masle opražíme nadrobno nakrájanú cibuľu. Pridáme nakrájané kuracie prsia, dochutíme ich
             soľou, korením, kari a červenou paprikou. Chvíľu ich restujeme a prilejeme vývar. Mäso približne 5 minút

@@ -16,16 +16,17 @@ include "../server/server.php"
 <body>
 <?php include('../header/header.php'); ?>
 <div class="gallery">
-    <form class="form-signin" method="post" action="<?php pridajObrazok($link); ?>">
+    <form class="form-signin" method="post" enctype="multipart/form-data"  action="<?php pridajObrazok($link); ?>">
+
         <h1 class="h3 mb-3 font-weight-normal textCent">Pridaj obrázok</h1>
-        <input type="file" accept="image/jpeg" class="form-control" name="pridanyObrazok">
+        <input type="file" name="pridanyObrazok"  id="pridanyObrazok" accept="image/jpeg" class="form-control" >
 
-
-        <input type="radio" name="typObr" value="gulas">
+        <h1 class="h3 mb-3 font-weight-normal textCent">Vyber typ obrázku. </h1>
+        <input type="radio" name="typObr" value="1">
         <label for="gulas">Gulas</label><br>
-        <input type="radio" name="typObr" value="kari">
+        <input type="radio" name="typObr" value="3">
         <label for="kari">Kari</label><br>
-        <input type="radio" name="typObr" value="losos">
+        <input type="radio" name="typObr" value="2">
         <label for="losos">Losos</label>
 
         <div>

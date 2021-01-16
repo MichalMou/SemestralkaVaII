@@ -12,22 +12,13 @@ include "../server/server.php"
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
       <title>Galeria jedál</title>
   </head>
-
   <body>
   <?php include('../header/header.php'); ?>
 
-    <div class="gallery">
-        <div class="image text">
-            <p>
-                Názov síce pochádza z maďarčiny od slova gulya, ale udomácnil sa ako na Slovensku, tak i v Českej republike. Dôležité je zapamätať si, že maďarský guláš sa nezahusťuje ani múkou, ani zemiakmi či chlebom. Že hustotu docielite použitím hovädzieho predného mäsa, ktoré je vhodné na dusenie, má krátke vlákna a obsahuje veľa "kližky" či "glejovky". Že okrem väčšieho množstva cibule použijete aj zeleninu. Že z korenín sa používa len paprika a paprika a zasa len paprika. A že najdôležitejšie je urobiť poriadny základ, s ktorým sa pohráte. Docielite tak nielen výbornú chuť gulášu, ale aj krásnu farbu.
-            </p>
-        </div>
-
-
-
-
-
+  <div class="gallery">
+      <div class="textCent">
+          <h1>Galéria jedla</h1>
+      </div>
     </div>
-
   </body>
 </html>

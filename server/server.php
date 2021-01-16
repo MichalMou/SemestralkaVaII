@@ -6,21 +6,22 @@ session_start();
 $login = "";
 $email = "";
 $password = "";
-$errors = array();
+$errory = 0;
 
 // vytvorim spojenie
 $link = mysqli_connect('localhost', 'root', '', 'vaiisem');
 
 // otestujem spojenie
-if(!$link) {
+if (!$link) {
     echo "Nepodarilo sa pripojit na MySQL server!";
-    echo 'chyba'.mysqli_connect_error();
+    echo 'chyba' . mysqli_connect_error();
     die;
 }
 
 function register($link)
 {
     if (isset($_POST['register'])) {
+        $errory = 0;
         $nick = mysqli_real_escape_string($link, $_POST['nick']);
         $email = mysqli_real_escape_string($link, $_POST['email']);
         $password = mysqli_real_escape_string($link, $_POST['password']);
@@ -28,19 +29,24 @@ function register($link)
 
         //controll of input
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format";
+            $errory++;
+            echo "<p>Invalid email format </p>p>";
         }
         if (empty($nick)) {
-            array_push($errors, "Username is required");
+            $errory++;
+            echo "<p>Username is required</p>";
         }
         if (empty($email)) {
-            array_push($errors, "Email is required");
+            $errory++;
+            echo "<p>Email is required</p>";
         }
         if (empty($password)) {
-            array_push($errors, "Password is required");
+            $errory++;
+            echo "<p>Password is required</p>>";
         }
         if ($password != $repassword) {
-            array_push($errors, "The two passwords do not match");
+            $errory++;
+            echo "<p>The two passwords do not match</p>";
         }
 
         //controll of occupied acc name or email
@@ -51,15 +57,17 @@ function register($link)
         // if user exists
         if ($user) {
             if ($user['login'] === $nick) {
-                array_push($errors, "Username already exists");
+                $errory++;
+                echo "<p>Username already exists</p>";
             }
 
             if ($user['email'] === $email) {
-                array_push($errors, "email already exists");
+                $errory++;
+                echo "<p>email already exists</p>";
             }
         }
         //kontrola chyb
-        if (count($errors) == 0) {
+        if ($errory++ == 0) {
             $encryptedPswd = md5($password);
             $SQLquerry = "INSERT INTO account (email,login,password) VALUES ('$email','$nick','$encryptedPswd')";
             mysqli_query($link, $SQLquerry);
@@ -70,7 +78,8 @@ function register($link)
     }
 }
 
-function login($link){
+function login($link)
+{
     if (isset($_POST['username'])) {
         $login = mysqli_real_escape_string($link, $_POST['username']);
         $password = mysqli_real_escape_string($link, $_POST['loginPassword']);
@@ -85,7 +94,8 @@ function login($link){
     }
 }
 
-function editAccount($link){
+function editAccount($link)
+{
     if (isset($_POST['edit'])) {
         $errors = array();
         $newLogin = mysqli_real_escape_string($link, $_POST['newUsername']);
@@ -129,7 +139,8 @@ function editAccount($link){
     }
 }
 
-function deleteAccount($link){
+function deleteAccount($link)
+{
     if (isset($_POST['delete'])) {
         $username = mysqli_real_escape_string($link, $_SESSION['login']);
         $query = "SELECT ID FROM account WHERE login='$username'";
@@ -140,7 +151,7 @@ function deleteAccount($link){
         $query = "DELETE FROM account WHERE ID='$id'";
         $result = mysqli_query($link, $query);
 
-        if(mysqli_affected_rows($link) > 0){
+        if (mysqli_affected_rows($link) > 0) {
             session_reset();
             header("location: home.php");
             exit();
@@ -148,28 +159,29 @@ function deleteAccount($link){
     }
 }
 
-function logout(){
-    if(isset($_POST['logout'])){
+function logout()
+{
+    if (isset($_POST['logout'])) {
         $_SESSION['login'] = "";
         header("location: home.php?");
         exit();
     }
 }
 
-function getObrazok($link, $typ) {
+function getObrazok($link, $typ)
+{
     $query = "SELECT * FROM obrazky";
     $result = mysqli_query($link, $query);
-
     $i = 0;
+
     if (mysqli_num_rows($result) > 0) {
-        while($i < mysqli_num_rows($result)){
+        while ($i < mysqli_num_rows($result)) {
             $i++;
             $row = mysqli_fetch_array($result);
 
             // zobrazovanie obrazkov
-            if ($row['typ'] == $typ){
+            if ($row['typ'] == $typ) {
                 $img_adr = $row['adresa'];
-                $img_nazov = $row['nazov'];
 
                 echo "
                     <div class='image' >
@@ -185,20 +197,23 @@ function getObrazok($link, $typ) {
 }
 
 
-function pridajObrazok($link) {
-    if(isset($_POST['pridajObrazok'])){
-        $adresa = mysqli_real_escape_string($link, $_POST['adresa']);
+function pridajObrazok($link)
+{
+    if (isset($_POST['upload'])) {
+        $priecinok_obr = '../image/';
+
+        $tmp_adresa = $_FILES['pridanyObrazok']['tmp_name'];
+        $nazov = $_FILES['pridanyObrazok']['name'];
+
         $typObr = $_POST['typObr'];
-        $obrazok = $_FILES['pridanyObrazok'];
+        $adresa = "../image/$nazov";
 
-        if (empty($obrazok)) {
-            array_push($errors,"Zadaj obrazok");
-        }
-        if (empty($typObr)){
-            array_push($errors,"Zadaj typ obrazku");
-        }
+        move_uploaded_file($tmp_adresa, $priecinok_obr.$nazov);
 
+        $query = "INSERT INTO obrazky (nazov, typ, adresa) VALUES ('$nazov','$typObr','$adresa')";
+        $result = mysqli_query($link, $query);
 
+        header("location: home.php");
+        exit();
     }
-
 }

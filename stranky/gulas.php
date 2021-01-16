@@ -21,7 +21,8 @@ include "../server/server.php"
 <body>
 <?php include('../header/header.php'); ?>
 <div class="gallery">
-    <div class="article text">
+    <div class="article text textCent">
+        <h1>Hovädzí guláš</h1>
         <p>
             Názov síce pochádza z maďarčiny od slova gulya, ale udomácnil sa ako na Slovensku, tak i v Českej republike.
             Dôležité je zapamätať si, že maďarský guláš sa nezahusťuje ani múkou, ani zemiakmi či chlebom. Že hustotu
@@ -31,8 +32,9 @@ include "../server/server.php"
             Docielite tak nielen výbornú chuť gulášu, ale aj krásnu farbu.
         </p>
     </div>
-
     <?php getObrazok($link, 1); ?>
+
+    // recenzie
 
 </div>
 

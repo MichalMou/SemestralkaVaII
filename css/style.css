@@ -71,9 +71,9 @@ a:hover {
 
 .image {
     overflow: auto;
-    margin: 20px;
-    left: 15%;
-    max-width: 35%;
+    margin: 1%;
+    left: 13%;
+    width: 35%;
     max-height: 40vh;
     display: inline-block;
     position: relative;
@@ -84,8 +84,8 @@ a:hover {
 }
 
 .article {
-    margin: 20px;
-    left: 15%;
+    margin: 2%;
+    left: 13%;
     max-width: 70%;
 
     display: inline-block;
@@ -114,9 +114,11 @@ p {
     text-align: center;
 }
 
+
+
 @media only screen and (max-width: 900px) {
     .image {
-        max-width: 80%;
+        width: 80%;
         left: 5%;
     }
     .header {
@@ -156,20 +158,4 @@ p {
 
 .hidden {
     visibility: hidden;
-}
-
-.kari1 {
-    background-image: url("../image/kari1.jpg");
-}
-.kari2 {
-    background-image: url("../image/kari2.jpg");
-}
-.kari3 {
-    background-image: url("../image/kari3.jpg");
-}
-.kari4 {
-    background-image: url("../image/kari4.jpg");
-}
-.kari5 {
-    background-image: url("../image/kari5.jpg");
 }

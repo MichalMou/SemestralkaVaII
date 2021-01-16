@@ -21,7 +21,8 @@ include "../server/server.php"
 <body>
 <?php include('../header/header.php'); ?>
 <div class="gallery">
-    <div class="article text">
+    <div class="article text textCent">
+        <h1>Grilovaný losos</h1>
         <p>
             Najskôr, kým je filet v kuse, ho umyjeme a zbavíme šupín, najlepšie škrabkou na zeleninu. Potom ho nakrájame
             na

@@ -16,6 +16,17 @@ include "../server/server.php"
 <body>
 <?php include('../header/header.php'); ?>
 <div class="gallery">
+
+    <form method="post"   action="<?php vymazObrazok($link); ?>">
+        <?php listObrazkov($link); ?>
+
+
+        <div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="delete">delete</button>
+        </div>
+    </form>
+
+
     <form class="form-signin" method="post" enctype="multipart/form-data"  action="<?php pridajObrazok($link); ?>">
 
         <h1 class="h3 mb-3 font-weight-normal textCent">Pridaj obrázok</h1>

@@ -189,13 +189,9 @@ function getObrazok($link, $typ)
                     </div>
                 ";
             }
-
-
         }
     }
-
 }
-
 
 function pridajObrazok($link)
 {
@@ -203,12 +199,12 @@ function pridajObrazok($link)
         $priecinok_obr = '../image/';
 
         $tmp_adresa = $_FILES['pridanyObrazok']['tmp_name'];
-        $nazov = $_FILES['pridanyObrazok']['name'];
+        $nazov = basename($_FILES['pridanyObrazok']['name']);
 
         $typObr = $_POST['typObr'];
         $adresa = "../image/$nazov";
 
-        move_uploaded_file($tmp_adresa, $priecinok_obr.$nazov);
+        move_uploaded_file($tmp_adresa, $priecinok_obr . $nazov);
 
         $query = "INSERT INTO obrazky (nazov, typ, adresa) VALUES ('$nazov','$typObr','$adresa')";
         $result = mysqli_query($link, $query);
@@ -216,4 +212,37 @@ function pridajObrazok($link)
         header("location: home.php");
         exit();
     }
+}
+
+function listObrazkov($link)
+{
+    $query = "SELECT * FROM obrazky";
+    $result = mysqli_query($link, $query);
+    $i = 0;
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($i < mysqli_num_rows($result)) {
+            $i++;
+            $row = mysqli_fetch_array($result);
+            $img_adr = $row['adresa'];
+            // zobrazovanie obrazkov
+
+            echo "
+                    <div class='check-img' >
+                        <img src='$img_adr'  />
+                    </div>
+                    <div class='check-text'>
+                        <input class='textCent' type='checkbox' id='image.$i' name='image.$i' value='1'>
+                        <label for='image.$i' > I have a bike</label><br>
+                    </div>
+                    
+                    
+              ";
+        }
+    }
+}
+
+function vymazObrazok($link)
+{
+
 }

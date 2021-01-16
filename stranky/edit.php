@@ -17,6 +17,17 @@ include "../server/server.php"
 <?php include('../header/header.php'); ?>
 
 <div class="gallery">
+
+    <div>
+        <h1 class="h3 mb-3 font-weight-normal textCent">Osobné údjaje</h1>
+        <form class="form-signin" method="post" >
+
+        </form>
+    </div>
+
+
+
+
     <form class="form-signin" method="post" action="<?php editAccount($link);  ?>">
         <h1 class="h3 mb-3 font-weight-normal textCent">Edit</h1>
         <input type="text" id="inputLogin" class="form-control" placeholder="Nick" required autofocus name="newUsername">

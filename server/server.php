@@ -68,7 +68,8 @@ function register($link)
         }
         //kontrola chyb
         if ($errory++ == 0) {
-            $encryptedPswd = md5($password);
+            $passwordSalty = $password . $nick;
+            $encryptedPswd = md5($passwordSalty);
             $SQLquerry = "INSERT INTO account (email,login,password) VALUES ('$email','$nick','$encryptedPswd')";
             mysqli_query($link, $SQLquerry);
             header("location: home.php");
@@ -83,7 +84,8 @@ function login($link)
     if (isset($_POST['username'])) {
         $login = mysqli_real_escape_string($link, $_POST['username']);
         $password = mysqli_real_escape_string($link, $_POST['loginPassword']);
-        $encryptedPassword = md5($password);
+        $passwordSalty = $password . $login;
+        $encryptedPassword = md5($passwordSalty);
         $query = "SELECT * FROM account WHERE login='$login' AND password='$encryptedPassword'";
         $results = mysqli_query($link, $query);
         if (mysqli_num_rows($results) == 1) {
@@ -166,6 +168,26 @@ function logout()
         header("location: home.php?");
         exit();
     }
+}
+
+function getOobneUdaje($link) {
+    $login = $_SESSION['login'];
+    $query = "SELECT * FROM account WHERE login='$login'";
+    $result = mysqli_query($link, $query);
+
+    $row = mysqli_fetch_array($result);
+    $email = $row['email'];
+    $heslo = $row['password'];
+
+
+    echo "
+    <p> 
+    Meno : $login <br/>
+    Email : $email <br/>
+    </p>
+    ";
+
+
 }
 
 function getObrazok($link, $typ)
@@ -282,15 +304,54 @@ function getClanok($link, $typ) {
 
             // zobrazovanie obrazkov
             if ($row['typ'] == $typ) {
+                $nadpis = $row['nadpis'];
                 $text = $row['článok'];
-
+                $nazov = $row['názov'];
                 echo "
-                    <p>
-                     $text
-                     </p>
-                ";
+                    <h1>$nadpis</h1>
+                    <p>$text</p>
+                    ";
+
+                if ($_SESSION['login'] == "admin") {
+                    echo '
+                        <form class="form-signin" method="post" action="<?php vymazatClanok($link,'.$nazov.');  ?>">
+                            <div>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit" name="deleteClanok">vymazať článok</button>
+                            </div>
+                        </form>
+                        ';
+
+                }
             }
         }
     }
 }
 
+function vymazatClanok($link,$nazov) {
+    if (isset($_POST['deleteImg'])) {
+        $query = "SELECT * FROM články";
+        $result = mysqli_query($link, $query);
+        $poc_riadkov = mysqli_num_rows($result);
+        $i = 0;
+
+        if ($poc_riadkov > 0) {
+            while ($i <= $poc_riadkov) {
+                $i++;
+                $row = mysqli_fetch_array($result);
+                $nazovClanok = $row['nazov'];
+
+                if ($nazov == $nazovClanok) {
+                    $query2 = "DELETE FROM obrazky WHERE nazov = '$nazovClanok'";
+                    $result2 = mysqli_query($link, $query2);
+                }
+            }
+        }
+        exit();
+    }
+}
+
+function pridajClanok($link) {
+
+
+
+}

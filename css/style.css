@@ -8,6 +8,10 @@ body {
     height: 100vh;
 }
 
+.hidden {
+    display: none;
+}
+
 li {
 
     display: inline-block;
@@ -58,15 +62,15 @@ a:hover {
     background-color: rgb(43, 43, 43);
     border-bottom: 2px solid black;
 }
-
 .gallery {
-    /* dorobit responzivny dizajn */
-    background-color: rgba(43, 43, 43, 0.3);
+/* dorobit responzivny dizajn */
+background-color: rgba(43, 43, 43, 0.3);
     position: relative;
     top: 100px;
     left: 10%;
     width: 80%;
 }
+
 
 
 .image {
@@ -134,11 +138,13 @@ p {
     background-image: none;
     background-color: white;
 }
-
 .textCent {
     text-align: center;
 }
 
+.textHome {
+    left:unset;
+}
 
 
 @media only screen and (max-width: 900px) {
@@ -175,12 +181,9 @@ p {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
-
-.hidden {
-    display: none;
 }

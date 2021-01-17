@@ -9,31 +9,25 @@
         <ul class="navbar-nav mr-auto">
             <li><a class="nav-link" href="../stranky/home.php">Hlavné jedlá</a>
                 <ul>
-                    <li><a href="../stranky/gulas.php">Hovädzí guláš</a></li>
-                    <li><a href="../stranky/kari.php">Kari kura</a></li>
-                    <li><a href="../stranky/losos.php">Grilovaný losos</a></li>
+                    <li><a href="../stranky/jedlo/gulas.php">Hovädzí guláš</a></li>
+                    <li><a href="../stranky/jedlo/kari.php">Kari kura</a></li>
+                    <li><a href="../stranky/jedlo/losos.php">Grilovaný losos</a></li>
                 </ul>
             </li>
+
             <li><a class="nav-link" href="../stranky/home.php">Nápoje</a>
                 <ul>
-                    <li><a href="#">Kofola</a></li>
-                    <li><a href="#">Pivo</a></li>
-                    <li><a href="#">Káva</a></li>
-                </ul>
-            </li>
-            <li><a class="nav-link" href="../stranky/home.php">Nápoje</a>
-                <ul>
-                    <li><a href="#">Kofola</a></li>
-                    <li><a href="#">Pivo</a></li>
-                    <li><a href="#">Káva</a></li>
+                    <li><a href="../stranky/napoje/kava.php">Káva</a></li>
+                    <li><a href="../stranky/napoje/kofola.php">Kofola</a></li>
+                    <li><a href="../stranky/napoje/pivo.php">Pivo</a></li>
                 </ul>
             </li>
 
             <li><a class="nav-link" href="../stranky/home.php">Dezerty</a>
                 <ul>
-                    <li><a href="#">Zmrzlina</a></li>
-                    <li><a href="#">Palacinky</a></li>
-                    <li><a href="#">Štrúdľa</a></li>
+                    <li><a href="../stranky/dezerty/palacinky.php">Palacinky</a></li>
+                    <li><a href="../stranky/dezerty/strudla.php">Štrúdľa</a></li>
+                    <li><a href="../stranky/dezerty/zmrzlina.php">Zmrzlina</a></li>
                 </ul>
             </li>
 

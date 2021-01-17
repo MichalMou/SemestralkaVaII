@@ -21,7 +21,7 @@ include "../server/server.php"
     <div>
         <h1 class="h3 mb-3 font-weight-normal textCent">Osobné údjaje</h1>
         <form class="form-signin" method="post" >
-
+            <?php getOobneUdaje($link);?>
         </form>
     </div>
 

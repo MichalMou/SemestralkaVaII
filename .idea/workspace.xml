@@ -23,14 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="dynamic content">
+      <change afterPath="$PROJECT_DIR$/stranky/dezerty/palacinky.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stranky/dezerty/strudla.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stranky/dezerty/zmrzlina.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stranky/napoje/kava.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stranky/napoje/kofola.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stranky/napoje/pivo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stranky/pridajClanok.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/Obrazky.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/Obrazky.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/gulas.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/gulas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/kari.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/kari.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/losos.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/losos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/gulas.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/jedlo/gulas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/kari.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/jedlo/kari.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/losos.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/jedlo/losos.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,12 +91,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Michal\Desktop\VAII\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\VAII\stranky\napoje" />
+      <recent name="C:\xampp\htdocs\VAII\stranky\jedlo" />
       <recent name="C:\xampp\htdocs\VAII\header" />
       <recent name="C:\Users\Michal\Desktop\VAII\image" />
+      <recent name="C:\Users\Michal\Desktop\VAII\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michal\Desktop\VAII\css" />
     </key>
   </component>
@@ -125,7 +135,7 @@
       <workItem from="1610642422142" duration="4316000" />
       <workItem from="1610704704375" duration="19150000" />
       <workItem from="1610786478339" duration="22439000" />
-      <workItem from="1610872597008" duration="8855000" />
+      <workItem from="1610872597008" duration="15277000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -232,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610820253153</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="dynamic content">
+      <created>1610882673572</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610882673572</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,21 +361,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="364" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610838397355" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1610881814881">
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1610892972427">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1610881814881" />
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1610892972427" />
     <state x="794" y="463" key="NewPhpFileDialog/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610715858134" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1610802575690">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="369" y="148" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606119400160" />
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610802575690" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610820255009">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610882676347">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="442" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606119631283" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610820255009" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610882676347" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610733215187" />
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606071365009">
       <screen x="0" y="0" width="1920" height="1080" />

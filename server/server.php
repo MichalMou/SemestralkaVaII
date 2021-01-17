@@ -209,7 +209,7 @@ function pridajObrazok($link)
         $query = "INSERT INTO obrazky (nazov, typ, adresa) VALUES ('$nazov','$typObr','$adresa')";
         $result = mysqli_query($link, $query);
 
-        header("location: home.php");
+        header("location: Obrazky.php");
         exit();
     }
 }
@@ -228,15 +228,13 @@ function listObrazkov($link)
             // zobrazovanie obrazkov
 
             echo "
-                    <div class='check-img' >
-                        <img src='$img_adr'  />
+                    <div class='checkImg ' >
+                        <img class='imgMid' src='$img_adr'  />
                     </div>
-                    <div class='check-text'>
-                        <input class='textCent' type='checkbox' id='image.$i' name='image.$i' value='1'>
-                        <label for='image.$i' > I have a bike</label><br>
+                    <div class='checkText'>
+                        <input class='textCent' type='checkbox' id='image$i' name='image$i' value='1'>
+                        <label for='image$i' > Vymazat tento obrázok</label><br>
                     </div>
-                    
-                    
               ";
         }
     }
@@ -244,5 +242,55 @@ function listObrazkov($link)
 
 function vymazObrazok($link)
 {
+    if (isset($_POST['deleteImg'])) {
+        $query = "SELECT * FROM obrazky";
+        $result = mysqli_query($link, $query);
+        $poc_riadkov = mysqli_num_rows($result);
+        $i = 0;
 
+        if ($poc_riadkov > 0) {
+            while ($i <= $poc_riadkov) {
+                $i++;
+                $row = mysqli_fetch_array($result);
+                $img_nazov = $row['nazov'];
+
+                // testovacia cast
+                $tmp_post = 'image' . $i;
+
+                if (isset($_POST[$tmp_post])) {
+                    $query2 = "DELETE FROM obrazky WHERE nazov = '$img_nazov'";
+                    $result2 = mysqli_query($link, $query2);
+                }
+            }
+
+        }
+        header("location: home.php");
+        exit();
+
+    }
 }
+
+function getClanok($link, $typ) {
+    $query = "SELECT * FROM články";
+    $result = mysqli_query($link, $query);
+    $i = 0;
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($i < mysqli_num_rows($result)) {
+            $i++;
+            $row = mysqli_fetch_array($result);
+
+            // zobrazovanie obrazkov
+            if ($row['typ'] == $typ) {
+                $text = $row['článok'];
+
+                echo "
+                    <p>
+                     $text
+                     </p>
+                ";
+            }
+        }
+    }
+}
+

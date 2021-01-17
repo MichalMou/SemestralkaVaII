@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="../stranky/home.php">HOME</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+            aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -36,11 +37,27 @@
                 </ul>
             </li>
 
-            <li><a class="nav-link <?php if ($_SESSION['login'] != ""){echo "hidden";} ?> " href="../stranky/login.php">login</a> </li>
-            <li><a class="nav-link <?php if ($_SESSION['login'] != ""){echo "hidden";} ?> " href="../stranky/register.php">register</a> </li>
-            <li><a class="nav-link <?php if ($_SESSION['login'] != "admin"){echo "hidden";} ?> " href="../stranky/Obrazky.php">pridaj</a> </li>
-            <li><a class="nav-link <?php if ($_SESSION['login'] == ""){echo "hidden";} ?>" href="../stranky/edit.php">edit</a> </li>
-            <li><a class="nav-link <?php if ($_SESSION['login'] == ""){echo "hidden";} ?>" href="../stranky/logout.php">logout</a> </li>
+            <li><a class="nav-link" href="../stranky/home.php">Možnosti</a>
+                <ul>
+
+                    <li class="<?php if ($_SESSION['login'] != "") {
+                        echo "hidden";
+                    } ?>"><a class="nav-link " href="../stranky/login.php">Login</a></li>
+                    <li class="<?php if ($_SESSION['login'] != "") {
+                        echo "hidden";
+                    } ?>"><a class="nav-link" href="../stranky/register.php">Register</a> </li>
+                    <li class="<?php if ($_SESSION['login'] != "admin") {
+                        echo "hidden";
+                    } ?>"><a class=" nav-link" href="../stranky/Obrazky.php">Správa obrázkov</a> </li>
+                    <li class="<?php if ($_SESSION['login'] == "") {
+                        echo "hidden";
+                    } ?>"><a class=" nav-link " href="../stranky/edit.php">Správa účtu</a> </li>
+                    <li class="<?php if ($_SESSION['login'] == "") {
+                        echo "hidden";
+                    } ?>"><a class=" nav-link " href="../stranky/logout.php">Logout</a> </li>
+                </ul>
+            </li>
+
         </ul>
 
     </div>

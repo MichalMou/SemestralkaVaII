@@ -86,21 +86,33 @@ a:hover {
 .image img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
-.check-text {
-    display: inline-block;
+.checkImg {
     position: relative;
-    width: 80%;
-    left: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 400px;
+    max-width: 600px;
+    border-width: 2px;
 }
 
-.check-text {
-    font-weight: bold;
-    font-size: larger;
-    text-align: center;
+.imgmid {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.checkImg img {
+    max-width: inherit;
+    max-height: inherit;
+    object-fit: cover;
+}
+
+.checkText {
+    font-weight: bold;
+    font-size: x-large ;
+    text-align: center;
 }
 
 .article {
@@ -170,5 +182,5 @@ p {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }

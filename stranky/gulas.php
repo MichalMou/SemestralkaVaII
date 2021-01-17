@@ -23,14 +23,7 @@ include "../server/server.php"
 <div class="gallery">
     <div class="article text textCent">
         <h1>Hovädzí guláš</h1>
-        <p>
-            Názov síce pochádza z maďarčiny od slova gulya, ale udomácnil sa ako na Slovensku, tak i v Českej republike.
-            Dôležité je zapamätať si, že maďarský guláš sa nezahusťuje ani múkou, ani zemiakmi či chlebom. Že hustotu
-            docielite použitím hovädzieho predného mäsa, ktoré je vhodné na dusenie, má krátke vlákna a obsahuje veľa
-            "kližky" či "glejovky". Že okrem väčšieho množstva cibule použijete aj zeleninu. Že z korenín sa používa len
-            paprika a paprika a zasa len paprika. A že najdôležitejšie je urobiť poriadny základ, s ktorým sa pohráte.
-            Docielite tak nielen výbornú chuť gulášu, ale aj krásnu farbu.
-        </p>
+        <?php getClanok($link,1);?>
     </div>
     <?php getObrazok($link, 1); ?>
 

@@ -23,11 +23,7 @@ include "../server/server.php"
 <div class="gallery">
     <div class="article text textCent">
         <h1>Kari kura</h1>
-        <p>
-            Na rozpálenom masle opražíme nadrobno nakrájanú cibuľu. Pridáme nakrájané kuracie prsia, dochutíme ich
-            soľou, korením, kari a červenou paprikou. Chvíľu ich restujeme a prilejeme vývar. Mäso približne 5 minút
-            varíme na miernom ohni, primiešame smotanu a necháme ju prehriať. Kari podávame s ryžou.
-        </p>
+        <?php getClanok($link,3);?>
 
     </div>
     <?php getObrazok($link, 3); ?>

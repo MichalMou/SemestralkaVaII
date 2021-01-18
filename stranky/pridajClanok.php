@@ -26,19 +26,19 @@ include "../server/server.php"
     <div class="textCent">
         <form class="form-signin-text " method="post" action="<?php pridajClanok($link); ?>">
 
-            <div><label for="subject">Názov článku</label></div>
+            <div><label for="subject1">Názov článku</label></div>
             <div class="article-okno article-text">
-                <textarea class="article-okno article-text" id="subject" name="nazovClanok" placeholder="Názov.." ></textarea>
+                <textarea class="article-okno article-text" id="subject1" name="nazovClanok" placeholder="Názov.." ></textarea>
             </div>
 
-            <div><label for="subject">Nadpis</label></div>
+            <div><label for="subject2">Nadpis</label></div>
             <div class="article-okno article-text">
-                <textarea class="article-okno article-text" id="subject" name="nadpisClanok" placeholder="Nadpis.." ></textarea>
+                <textarea class="article-okno article-text" id="subject2" name="nadpisClanok" placeholder="Nadpis.." ></textarea>
             </div>
 
-            <div><label for="subject">Článok</label></div>
+            <div><label for="subject3">Článok</label></div>
             <div class="article-okno">
-                <textarea class="article-okno" id="subject" name="textClanok" placeholder="Text článku.."></textarea>
+                <textarea class="article-okno" id="subject3" name="textClanok" placeholder="Text článku.."></textarea>
             </div>
 
             <h1 class="h3 mb-3 font-weight-normal textCent">Vyber typ článku. </h1>

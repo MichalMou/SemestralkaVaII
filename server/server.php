@@ -18,6 +18,8 @@ if (!$link) {
     die;
 }
 
+
+
 function register($link)
 {
     if (isset($_POST['register'])) {
@@ -207,7 +209,7 @@ function getObrazok($link, $typ)
 
                 echo "
                     <div class='image' >
-                        <img src=" . $img_adr . " />
+                        <img alt='' src='" . $img_adr . "' />
                     </div>
                 ";
             }
@@ -251,7 +253,7 @@ function listObrazkov($link)
 
             echo "
                     <div class='checkImg ' >
-                        <img class='imgMid' src='$img_adr'  />
+                        <img class='imgMid' alt='' src='$img_adr'  />
                     </div>
                     <div class='checkText'>
                         <input class='textCent' type='checkbox' id='image$i' name='image$i' value='1'>

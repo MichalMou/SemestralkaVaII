@@ -6,7 +6,7 @@ include "../server/server.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
@@ -22,11 +22,9 @@ include "../server/server.php"
 <?php include('../header/header.php'); ?>
 <div class="gallery">
     <div class="article text textCent">
-        <?php getClanok($link,7);?>
+        <?php getClanok($link,8);?>
     </div>
-    <?php getObrazok($link, 7); ?>
-
-    // recenzie
+    <?php getObrazok($link, 8); ?>
 
 </div>
 

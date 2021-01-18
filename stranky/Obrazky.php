@@ -23,12 +23,18 @@ include "../server/server.php"
         <input type="file" name="pridanyObrazok"  id="pridanyObrazok" accept="image/jpeg" class="form-control" >
 
         <h1 class="h3 mb-3 font-weight-normal textCent">Vyber typ obrázku. </h1>
-        <input type="radio" name="typObr" value="1">
-        <label for="gulas">Gulas</label><br>
-        <input type="radio" name="typObr" value="3">
-        <label for="kari">Kari</label><br>
-        <input type="radio" name="typObr" value="2">
-        <label for="losos">Losos</label>
+        <select class="selectMid" name="typObr">
+            <option value="0">Vyber typ obrázku:</option>
+            <option value="1">Guláš</option>
+            <option value="2">Losos</option>
+            <option value="3">Kari</option>
+            <option value="4">Káva</option>
+            <option value="5">Kofola</option>
+            <option value="6">Pivo</option>
+            <option value="7">Palacinky</option>
+            <option value="8">Štrudľa</option>
+            <option value="9">Zmrzlina</option>
+        </select>
 
         <div>
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="upload">upload</button>
@@ -40,7 +46,7 @@ include "../server/server.php"
 
 
         <div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" name="deleteImg">delete</button>
+            <button class="btn btn-lg btn-primary btn-block btn-marg" type="submit" name="deleteImg">delete</button>
         </div>
     </form>
 

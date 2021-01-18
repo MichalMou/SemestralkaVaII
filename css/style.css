@@ -6,10 +6,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-}
 
-.hidden {
-    display: none;
 }
 
 li {
@@ -21,6 +18,8 @@ li {
     padding: 15px;
     z-index: 1;
 }
+
+
 
 ul {
     width: max-content;
@@ -53,6 +52,20 @@ a:hover {
     color: aqua;
 }
 
+.hidden {
+    display: none;
+}
+
+.gallery {
+    /* dorobit responzivny dizajn */
+    background-color: rgba(43, 43, 43, 0.3);
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
 .header {
     z-index: 1;
     position: fixed;
@@ -61,14 +74,6 @@ a:hover {
     width: 100vw;
     background-color: rgb(43, 43, 43);
     border-bottom: 2px solid black;
-}
-.gallery {
-/* dorobit responzivny dizajn */
-background-color: rgba(43, 43, 43, 0.3);
-    position: relative;
-    top: 100px;
-    left: 10%;
-    width: 80%;
 }
 
 
@@ -124,9 +129,29 @@ background-color: rgba(43, 43, 43, 0.3);
     left: 13%;
     max-width: 70%;
 
-    display: inline-block;
+    display: block;
     position: relative;
     border: 1px solid black ;
+}
+
+.article-okno {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px ;
+    width: 70vw;
+    height: 300px;
+}
+
+.article-text {
+    height: auto;
+    max-width: 50vw;
+
+}
+
+label {
+    font-family: Verdana;
+    font-size: 45px;
+    line-height: 1.5;
 }
 
 p {
@@ -142,10 +167,21 @@ p {
     text-align: center;
 }
 
-.textHome {
-    left:unset;
+.textInfo {
+    font-size: 20px;
 }
 
+.selectMid {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    position: relative;
+    display: block;
+}
+
+.selectMid-selected {
+    background-color: DodgerBlue;
+}
 
 @media only screen and (max-width: 900px) {
     .image {
@@ -162,6 +198,9 @@ p {
     max-width: 330px;
     padding: 15px;
     margin: auto;
+}
+.form-signin-text {
+    max-width: 80vW;
 }
 .form-signin .checkbox {
     font-weight: 400;
@@ -181,9 +220,9 @@ p {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
-
 .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+

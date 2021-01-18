@@ -18,7 +18,7 @@ include "../server/server.php"
   <div class="gallery">
       <div class="textCent">
           <h1>Galéria jedla</h1>
-          <div class="article text textCent textHome">
+          <div class="article text textCent">
               <?php getClanok($link,0);?>
           </div>
           <?php getObrazok($link,0);?>

@@ -181,7 +181,7 @@ function getOobneUdaje($link) {
 
 
     echo "
-    <p> 
+    <p class='textInfo'> 
     Meno : $login <br/>
     Email : $email <br/>
     </p>
@@ -351,7 +351,16 @@ function vymazatClanok($link,$nazov) {
 }
 
 function pridajClanok($link) {
+    if(isset($_POST['pridajClanok'])) {
+        $nazov = $_POST['nazovClanok'];
+        $nadpis = $_POST['nadpisClanok'];
+        $text = $_POST['textClanok'];
+        $typ = $_POST['typClanok'];
+        $query = "INSERT INTO články(typ, názov, nadpis, článok) VALUES ('$typ','$nazov','$nadpis','$text')";
+        $result = mysqli_query($link, $query);
 
+
+    }
 
 
 }

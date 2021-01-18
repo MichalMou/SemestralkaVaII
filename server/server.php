@@ -354,9 +354,9 @@ function vymazatClanok($link,$nazov) {
 
 function pridajClanok($link) {
     if(isset($_POST['pridajClanok'])) {
-        $nazov = mysqli_real_escape_string($_POST['nazovClanok']);
-        $nadpis = mysqli_real_escape_string($_POST['nadpisClanok']);
-        $text = mysqli_real_escape_string($_POST['textClanok']);
+        $nazov = mysqli_real_escape_string($link,$_POST['nazovClanok']);
+        $nadpis = mysqli_real_escape_string($link,$_POST['nadpisClanok']);
+        $text = mysqli_real_escape_string($link,$_POST['textClanok']);
         $typ = $_POST['typClanok'];
         $query = "INSERT INTO články(typ, názov, nadpis, článok) VALUES ('$typ','$nazov','$nadpis','$text')";
         $result = mysqli_query($link, $query);

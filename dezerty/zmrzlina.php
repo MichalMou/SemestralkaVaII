@@ -22,9 +22,9 @@ include "../server/server.php"
 <?php include('../header/header.php'); ?>
 <div class="gallery">
     <div class="article text textCent">
-        <?php getClanok($link,8);?>
+        <?php getClanok($link,9);?>
     </div>
-    <?php getObrazok($link, 8); ?>
+    <?php getObrazok($link, 9); ?>
 
 </div>
 

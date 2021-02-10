@@ -30,11 +30,14 @@ function register($link)
         $repassword = mysqli_real_escape_string($link, $_POST['repassword']);
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            header("location: login.php?invEml");
+            header("location: register.php?invEml");
+            $errory++;
+
         }
 
         if ($password != $repassword) {
-            header("location: login.php?invEml");
+            header("location: register.php?matPwd");
+            $errory++;
         }
 
         $user_check_query = "SELECT * FROM account WHERE login='$nick' OR email='$email' LIMIT 1";
@@ -43,20 +46,23 @@ function register($link)
 
         if ($user) {
             if ($user['login'] === $nick) {
-                header("location: login.php?exLog");
+                header("location: register.php?exLog");
+                $errory++;
+
             }
             if ($user['email'] === $email) {
-                header("location: login.php?exEml");
+                header("location: register.php?exEml");
+                $errory++;
             }
-        } else {
+        }
+        if ($errory== 0){
             $passwordSalty = $password . $nick;
             $encryptedPswd = md5($passwordSalty);
             $SQLquerry = "INSERT INTO account (email,login,password) VALUES ('$email','$nick','$encryptedPswd')";
             mysqli_query($link, $SQLquerry);
-            header("location: home.php");
+            header("location: register.php?succ");
             exit();
         }
-
     }
 }
 
@@ -155,7 +161,7 @@ function logout()
     }
 }
 
-function getOobneUdaje($link) {
+function getOsbneUdaje($link) {
     $login = $_SESSION['login'];
     $query = "SELECT * FROM account WHERE login='$login'";
     $result = mysqli_query($link, $query);
@@ -287,19 +293,28 @@ function getClanok($link, $typ) {
             $i++;
             $row = mysqli_fetch_array($result);
 
-            // zobrazovanie obrazkov
             if ($row['typ'] == $typ) {
                 $nadpis = $row['nadpis'];
                 $text = $row['článok'];
                 $nazov = $row['názov'];
                 echo "
                     <h1>$nadpis</h1>
-                    <p class='text_me'>$text</p>
+                    <div class='text_me' id='textClanku' onclick='toggleEditor()'>$text</div>
+                    <div id='editor'>
+                        <textarea id='ta1' name='ta1' rows='10' cols='50'></textarea><br />
+                        <input name='submit' id='submit' type='button' value='Edit Text' onclick='doEdit()' />
+                    </div>
+                    
                     ";
+
+                getObrazok($link, $nazov);
+
 
                 if ($_SESSION['login'] == "admin") {
                     echo '
-                        <form class="form-signin" method="post" action="<?php vymazatClanok($link,'.$nazov.');  ?>">
+                    
+                    
+                        <form class="form-signin"  method="post" action="<?php vymazatClanok($link,'.$nazov.');  ?>">
                             <div>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit" name="deleteClanok">vymazať článok</button>
                             </div>

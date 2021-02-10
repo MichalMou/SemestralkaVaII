@@ -19,10 +19,10 @@ include "../server/server.php"
     <form class="form-signin" method="post" enctype="multipart/form-data"  action="<?php pridajObrazok($link); ?>">
 
 
-        <h1 class="h3 mb-3 font-weight-normal textCent">Pridaj obrázok</h1>
+        <h1 class="textCent">Pridaj obrázok</h1>
         <input type="file" name="pridanyObrazok"  id="pridanyObrazok" accept="image/jpeg" class="form-control" >
 
-        <h1 class="h3 mb-3 font-weight-normal textCent">Vyber typ obrázku. </h1>
+        <h1 class="textCent">Categória obrázku</h1>
         <select class="selectMid" name="typObr">
             <option value="0">Vyber typ obrázku:</option>
             <option value="1">Guláš</option>

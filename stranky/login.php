@@ -21,9 +21,17 @@ include "../server/server.php"
                 <input type="text" id="inputLogin" class="form-control" placeholder="Username" required autofocus name="username">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="loginPassword">
                 <div>
+                    <?php
+                    if (isset($_GET['badPwd'])) {
+                        echo '<p>Zle heslo!</p>'."\n";
+                    }
+                    ?>
+                </div>
+                <div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">login</button>
                 </div>
             </form>
+
         </div>
 
     </body>

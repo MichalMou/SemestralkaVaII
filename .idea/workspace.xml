@@ -24,6 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="dynamic content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Jedlo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/Obrazky.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/Obrazky.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/pridajClanok.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/pridajClanok.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +79,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -125,7 +132,10 @@
       <workItem from="1610959592479" duration="590000" />
       <workItem from="1610975212435" duration="3795000" />
       <workItem from="1610981381383" duration="289000" />
-      <workItem from="1611054175596" duration="2168000" />
+      <workItem from="1611054175596" duration="3471000" />
+      <workItem from="1612514937359" duration="864000" />
+      <workItem from="1612710873103" duration="27000" />
+      <workItem from="1612964090368" duration="6131000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -281,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611055136792</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="dynamic content">
+      <created>1611058138595</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611058138595</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,26 +342,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="735" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1610808108964" />
-    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603541369505">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603541369505" />
     <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1606070410071">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606070410071" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1603644209912">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603644209912" />
-    <state x="838" y="438" key="Github.ShareDialog" timestamp="1603641948089">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="838" y="438" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603641948089" />
-    <state x="800" y="245" key="Github.UntrackedFilesDialog" timestamp="1603641964084">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="800" y="245" key="Github.UntrackedFilesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603641964084" />
     <state width="1876" height="364" key="GridCell.Tab.0.bottom" timestamp="1610838397355">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -403,11 +404,11 @@
     </state>
     <state x="369" y="148" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606119400160" />
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610802575690" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1610981661296">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1612964117313">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="442" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606119631283" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610981661296" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612964117313" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610733215187" />
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606071365009">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -421,9 +422,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="774" y="434" key="git4idea.ui.GitResetDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606069948231" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603626162226">
+    <state x="616" y="250" key="run.anything.popup" timestamp="1612969765884">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603626162226" />
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1612969765884" />
   </component>
 </project>

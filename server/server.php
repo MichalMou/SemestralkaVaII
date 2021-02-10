@@ -29,47 +29,26 @@ function register($link)
         $password = mysqli_real_escape_string($link, $_POST['password']);
         $repassword = mysqli_real_escape_string($link, $_POST['repassword']);
 
-        //controll of input
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errory++;
-            echo "<p>Invalid email format </p>p>";
-        }
-        if (empty($nick)) {
-            $errory++;
-            echo "<p>Username is required</p>";
-        }
-        if (empty($email)) {
-            $errory++;
-            echo "<p>Email is required</p>";
-        }
-        if (empty($password)) {
-            $errory++;
-            echo "<p>Password is required</p>>";
-        }
-        if ($password != $repassword) {
-            $errory++;
-            echo "<p>The two passwords do not match</p>";
+            header("location: login.php?invEml");
         }
 
-        //controll of occupied acc name or email
+        if ($password != $repassword) {
+            header("location: login.php?invEml");
+        }
+
         $user_check_query = "SELECT * FROM account WHERE login='$nick' OR email='$email' LIMIT 1";
         $result = mysqli_query($link, $user_check_query);
         $user = mysqli_fetch_assoc($result);
 
-        // if user exists
         if ($user) {
             if ($user['login'] === $nick) {
-                $errory++;
-                echo "<p>Username already exists</p>";
+                header("location: login.php?exLog");
             }
-
             if ($user['email'] === $email) {
-                $errory++;
-                echo "<p>email already exists</p>";
+                header("location: login.php?exEml");
             }
-        }
-        //kontrola chyb
-        if ($errory++ == 0) {
+        } else {
             $passwordSalty = $password . $nick;
             $encryptedPswd = md5($passwordSalty);
             $SQLquerry = "INSERT INTO account (email,login,password) VALUES ('$email','$nick','$encryptedPswd')";
@@ -94,7 +73,11 @@ function login($link)
             $_SESSION['login'] = $login;
             header("location: home.php?");
             exit();
+        } else {
+            header("location: login.php?badPwd");
         }
+
+
     }
 }
 
@@ -311,7 +294,7 @@ function getClanok($link, $typ) {
                 $nazov = $row['názov'];
                 echo "
                     <h1>$nadpis</h1>
-                    <p>$text</p>
+                    <p class='text_me'>$text</p>
                     ";
 
                 if ($_SESSION['login'] == "admin") {

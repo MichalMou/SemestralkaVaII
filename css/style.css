@@ -128,7 +128,6 @@ a:hover {
     margin: 2%;
     left: 13%;
     max-width: 70%;
-
     display: block;
     position: relative;
     border: 1px solid black ;
@@ -145,7 +144,10 @@ a:hover {
 .article-text {
     height: auto;
     max-width: 50vw;
+}
 
+.text_me {
+    white-space: pre-wrap;
 }
 
 label {
@@ -195,7 +197,7 @@ p {
 
 .form-signin {
     width: 100%;
-    max-width: 330px;
+    max-width: 400px;
     padding: 15px;
     margin: auto;
 }

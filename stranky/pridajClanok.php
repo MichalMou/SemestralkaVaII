@@ -28,20 +28,10 @@ include "../server/server.php"
 
             <div><label for="subject1">Názov článku</label></div>
             <div class="article-okno article-text">
-                <textarea class="article-okno article-text" id="subject1" name="nazovClanok" placeholder="Názov.." ></textarea>
+                <input class="article-okno article-text" id="subject1" name="nazovClanok" placeholder="Názov.." ></input>
             </div>
 
-            <div><label for="subject2">Nadpis</label></div>
-            <div class="article-okno article-text">
-                <textarea class="article-okno article-text" id="subject2" name="nadpisClanok" placeholder="Nadpis.." ></textarea>
-            </div>
-
-            <div><label for="subject3">Článok</label></div>
-            <div class="article-okno">
-                <textarea class="article-okno" id="subject3" name="textClanok" placeholder="Text článku.."></textarea>
-            </div>
-
-            <h1 class="h3 mb-3 font-weight-normal textCent">Vyber typ článku. </h1>
+            <h1 class="textCent">Vyber typ článku. </h1>
             <select class="selectMid" name="typClanok">
                 <option value="0">Vyber typ obrázku:</option>
                 <option value="1">Guláš</option>
@@ -54,6 +44,17 @@ include "../server/server.php"
                 <option value="8">Štrudľa</option>
                 <option value="9">Zmrzlina</option>
             </select>
+
+            <div><label for="subject2">Nadpis</label></div>
+            <div class="article-okno article-text">
+                <input class="article-okno article-text" id="subject2" name="nadpisClanok" placeholder="Nadpis.." ></input>
+            </div>
+
+            <div><label for="subject3">Článok</label></div>
+            <div class="article-okno">
+                <textarea class="article-okno" id="subject3" name="textClanok" placeholder="Text článku.."></textarea>
+            </div>
+
 
             <div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" name="pridajClanok">Pridaj článok</button>

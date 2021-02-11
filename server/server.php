@@ -19,7 +19,6 @@ if (!$link) {
 }
 
 
-
 function register($link)
 {
     if (isset($_POST['register'])) {
@@ -55,7 +54,7 @@ function register($link)
                 $errory++;
             }
         }
-        if ($errory== 0){
+        if ($errory == 0) {
             $passwordSalty = $password . $nick;
             $encryptedPswd = md5($passwordSalty);
             $SQLquerry = "INSERT INTO account (email,login,password) VALUES ('$email','$nick','$encryptedPswd')";
@@ -161,7 +160,8 @@ function logout()
     }
 }
 
-function getOsbneUdaje($link) {
+function getOsbneUdaje($link)
+{
     $login = $_SESSION['login'];
     $query = "SELECT * FROM account WHERE login='$login'";
     $result = mysqli_query($link, $query);
@@ -283,7 +283,73 @@ function vymazObrazok($link)
     }
 }
 
-function getClanok($link, $typ) {
+function getClanokScrip() {
+    echo "
+        <script>
+        function vymazClanok(varNazovClanku) {
+            var clanok = document.getElementById('clanok.'+ nazovClanku);
+            var nazovClanku = varNazovClanku
+            $.ajax({
+            url: '../stranky/vymaz_clanok.php',
+            method: 'POST',
+            data: {delNazov:  nazovClanku},
+            dataType: 'text',
+            success: function (data) {
+                clanok.style.display = 'none';
+                }
+            });  
+        }
+                        
+        function toggleEditor(login) {
+
+            if (login === 'admin') {
+                var text = document.getElementById('textClanku');
+                var editorArea = document.getElementById('editor');
+                var editor = document.getElementById('textUpraveny');
+                var subject = text.innerHTML;
+                                
+                subject = subject.replaceAll(new RegExp('<br />', 'g'), '/n');
+                subject = subject.replaceAll(new RegExp('<', 'g'), '<');
+                subject = subject.replaceAll(new RegExp('>', 'g'), '>');
+                editor.value = subject;
+                text.style.display = 'none';
+                editorArea.style.display = 'inline';
+                } 
+            }
+                    
+            function doEdit(nazov) {
+                var text = document.getElementById('textClanku');
+                var editorArea = document.getElementById('editor');
+                var editor = document.getElementById('textUpraveny');
+                var subject = editor.value;
+
+
+                $.ajax({
+                    url: '../stranky/edit_text.php',
+                    method: 'POST',
+                    data: {nazov: nazov, subject: subject},
+                    dataType: 'text',
+                    success: function (data) {
+                        
+                        }
+                    });                                          
+
+                subject = subject.replaceAll(new RegExp('<', 'g'), '<');
+                subject = subject.replaceAll(new RegExp('>', 'g'), '>');
+                subject = subject.replaceAll(new RegExp('/n', 'g'), '<br />');
+                text.innerHTML = subject;
+                 
+                text.style.display = 'inline';
+                editorArea.style.display = 'none';
+            }
+                        
+                        
+        </script>
+    ";
+}
+
+function getClanok($link, $typ)
+{
     $login = $_SESSION['login'];
     $query = "SELECT * FROM články";
     $result = mysqli_query($link, $query);
@@ -300,59 +366,13 @@ function getClanok($link, $typ) {
                 $nazov = $row['názov'];
 
                 echo "
-                    <div id='clanok.$nazov'>
-                    
-
+                    <div id='clanok.$nazov'>                   
                         <h1>$nadpis</h1>
-                        <div class='text_me' id='textClanku' onclick='toggleEditor()'>$text</div>
+                        <div class='text_me' id='textClanku' onclick='toggleEditor($login)'>$text</div>
                         <div id='editor'>
                         <textarea id='textUpraveny' name='ta1' rows='10' cols='50'></textarea><br />
-                        <input name='submit' id='submit' type='button' value='Edit Text' onclick='doEdit()' />
+                        <input name='submit' id='submit' type='button' value='Edit Text' onclick='doEdit($nazov)' />
                         </div>
-                    
-                    <script>
-                    function toggleEditor() {
-                    var login = '$login';
-                    if (login === 'admin') {
-                        var text = document.getElementById('textClanku');
-                        var editorArea = document.getElementById('editor');
-                        var editor = document.getElementById('textUpraveny');
-                        var subject = text.innerHTML;
-                            
-                        subject = subject.replaceAll(new RegExp('<br />', 'g'), '/n');
-                        subject = subject.replaceAll(new RegExp('<', 'g'), '<');
-                        subject = subject.replaceAll(new RegExp('>', 'g'), '>');
-                        editor.value = subject;
-                        text.style.display = 'none';
-                        editorArea.style.display = 'inline';
-                        } 
-                    }
-                    
-                    function doEdit() {
-                    var text = document.getElementById('textClanku');
-                    var editorArea = document.getElementById('editor');
-                    var editor = document.getElementById('textUpraveny');
-                    var subject = editor.value;
-
-                    $.ajax({
-                    url: '../stranky/edit_text.php',
-                    method: 'POST',
-                    data: {nazov: '$nazov', subject: subject},
-                    dataType: 'text',
-                    success: function (data) {
-                        }
-                    });                                          
-
-                        subject = subject.replaceAll(new RegExp('<', 'g'), '<');
-                        subject = subject.replaceAll(new RegExp('>', 'g'), '>');
-                        subject = subject.replaceAll(new RegExp('/n', 'g'), '<br />');
-                        text.innerHTML = subject;
-                 
-                    text.style.display = 'inline';
-                    editorArea.style.display = 'none';
-                    }
-                    
-                    </script>
                     ";
 
                 //getObrazokClanok($link, $nazov);
@@ -361,37 +381,19 @@ function getClanok($link, $typ) {
                     echo "
                         <form class='form-signin'  method='post'>
                             <div>
-                                <button class='btn btn-lg btn-primary btn-block' type='submit' name='deleteClanok' onclick='vymazClanok()'>vymazať článok</button>
+                                <button class='btn btn-lg btn-primary btn-block' type='submit' name='deleteClanok' onclick='vymazClanok(\"$nazov\")'>vymazať článok</button>
                             </div>
-                        </form>
-                        <script>
-                        function vymazClanok() {
-                            var clanok = document.getElementById('clanok.$nazov');
-                            clanok.style.display = 'none';
-                        
-                        $.ajax({
-                            url: '../stranky/vymaz_clanok.php',
-                            method: 'POST',
-                            data: {nazov: '$nazov'},
-                            dataType: 'text',
-                            success: function (data) {
-                                console.log('clanok vymazany');
-                                }
-                            });  
-                            
-                           
-                        }
-                        </script>
-                        </div>
+                        </form>                        
                         ";
-
                 }
+                echo "</div>";
             }
         }
     }
 }
 
-function editClanokText($link,$nazov,$novyText) {
+function editClanokText($link, $nazov, $novyText)
+{
     $query = "SELECT * FROM články";
     $result = mysqli_query($link, $query);
     $poc_riadkov = mysqli_num_rows($result);
@@ -405,39 +407,24 @@ function editClanokText($link,$nazov,$novyText) {
 
             if ($nazov == $row['názov']) {
                 $query2 = "UPDATE články SET článok = '$novyText' WHERE názov = '$nazov' ";
-                $result2 = mysqli_query($link, $query2);
+                mysqli_query($link, $query2);
             }
         }
     }
 }
 
-function vymazatClanok($link,$nazov) {
-    $query = "SELECT * FROM články";
-    $result = mysqli_query($link, $query);
-    $poc_riadkov = mysqli_num_rows($result);
-    $i = 0;
-
-    if ($poc_riadkov > 0) {
-        while ($i < $poc_riadkov) {
-            $i++;
-            $row = mysqli_fetch_array($result);
-            $nazovClanok = $row['názov'];
-            $query3 = "INSERT INTO články(typ, názov, nadpis, článok) VALUES ('0','err','$nazovClanok','$nazov')";
-            $result3 = mysqli_query($link, $query3);
-
-            if ($nazov == $nazovClanok) {
-                $query2 = "DELETE FROM články WHERE názov = '$nazovClanok'";
-                $result2 = mysqli_query($link, $query2);
-            }
-        }
-    }
+function vymazatClanok($link, $nazov)
+{
+    $query = "DELETE FROM články WHERE názov='$nazov'";
+    mysqli_query($link, $query);
 }
 
-function pridajClanok($link) {
-    if(isset($_POST['pridajClanok'])) {
-        $nazov = mysqli_real_escape_string($link,$_POST['nazovClanok']);
-        $nadpis = mysqli_real_escape_string($link,$_POST['nadpisClanok']);
-        $text = mysqli_real_escape_string($link,$_POST['textClanok']);
+function pridajClanok($link)
+{
+    if (isset($_POST['pridajClanok'])) {
+        $nazov = mysqli_real_escape_string($link, $_POST['nazovClanok']);
+        $nadpis = mysqli_real_escape_string($link, $_POST['nadpisClanok']);
+        $text = mysqli_real_escape_string($link, $_POST['textClanok']);
         $typ = $_POST['typClanok'];
         $query = "INSERT INTO články(typ, názov, nadpis, článok) VALUES ('$typ','$nazov','$nadpis','$text')";
         $result = mysqli_query($link, $query);

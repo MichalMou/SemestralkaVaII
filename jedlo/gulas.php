@@ -24,7 +24,10 @@ include "../server/server.php"
 <?php include('../header/header.php'); ?>
 <div class="gallery">
     <div class="article text textCent">
-        <?php getClanok($link,1);?>
+        <?php
+        getClanokScrip();
+        getClanok($link,1);
+        ?>
     </div>
     <?php getObrazok($link, 1); ?>
 

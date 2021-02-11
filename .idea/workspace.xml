@@ -23,15 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="AJAX1-ok">
-      <change afterPath="$PROJECT_DIR$/stranky/vymaz_clanok.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedlo/gulas.php" beforeDir="false" afterPath="$PROJECT_DIR$/jedlo/gulas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/clanky.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/editText.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/edit_text.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/pridajClanok.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/pridajClanok.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stranky/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/vymaz_clanok.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/vymaz_clanok.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +135,7 @@
       <workItem from="1612514937359" duration="864000" />
       <workItem from="1612710873103" duration="27000" />
       <workItem from="1612964090368" duration="11568000" />
-      <workItem from="1613029930191" duration="21592000" />
+      <workItem from="1613029930191" duration="28969000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -357,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613051555044</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="AJAX1-ok">
+      <created>1613058132701</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1613058132701</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,11 +469,11 @@
     </state>
     <state x="369" y="148" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606119400160" />
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610802575690" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613051598705">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613058135439">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="442" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606119631283" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613051598705" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613058135439" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610733215187" />
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606071365009">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -487,20 +491,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1612969765884" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/server/server.php</url>
-          <line>255</line>
-          <properties>
-            <option name="className" value="" />
-            <option name="methodName" value="\vymazObrazok" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1613064610142">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1613064610142" />
   </component>
 </project>

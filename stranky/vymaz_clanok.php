@@ -1,4 +1,4 @@
 <?php
 include '../server/server.php';
-vymazatClanok($link,$_POST['nazov']);
+vymazatClanok($link,$_POST['delNazov']);
 ?>

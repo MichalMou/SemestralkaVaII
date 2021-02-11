@@ -301,10 +301,53 @@ function getClanok($link, $typ) {
                     <h1>$nadpis</h1>
                     <div class='text_me' id='textClanku' onclick='toggleEditor()'>$text</div>
                     <div id='editor'>
-                        <textarea id='ta1' name='ta1' rows='10' cols='50'></textarea><br />
+                        <textarea id='textUpraveny' name='ta1' rows='10' cols='50'></textarea><br />
                         <input name='submit' id='submit' type='button' value='Edit Text' onclick='doEdit()' />
                     </div>
+                    <script>
+                    function toggleEditor() {
+                    var text = document.getElementById('textClanku');
+                    var editorArea = document.getElementById('editor');
+                    var editor = document.getElementById('textUpraveny');
+                    var subject = text.innerHTML;
                     
+                    subject = subject.replaceAll(new RegExp('<br />', 'gi'), '\n');
+                    subject = subject.replaceAll(new RegExp('<', 'gi'), '<');
+                    subject = subject.replaceAll(new RegExp('>', 'gi'), '>');
+                    editor.value = subject;
+ 
+                    text.style.display = 'none';
+                    editorArea.style.display = 'inline';
+                    }
+                    
+                    function doEdit() {
+                    var text = document.getElementById('textClanku');
+                    var editorArea = document.getElementById('editor');
+                    var editor = document.getElementById('textUpraveny');
+                    var subject = editor.value;
+                    var original = text.innerHTML;
+                    
+                     $.ajax({
+                     url: 'load_data.php',
+                     method: 'POST',
+                     data: {staryText: original, novyText: subject},
+                     dataType: 'text',
+                     success: function (data) {
+                        console.log(data);
+                        original.innerHTML = subject;
+                        }
+                     });                                          
+
+                    subject = subject.replaceAll(new RegExp('<', 'g'), '<');
+                    subject = subject.replaceAll(new RegExp('>', 'g'), '>');
+                    subject = subject.replaceAll(new RegExp('n', 'g'), '<br />');
+                    text.innerHTML = subject;
+                 
+                    text.style.display = 'inline';
+                    editorArea.style.display = 'none';
+                    }
+                    
+                    </script>
                     ";
 
                 getObrazok($link, $nazov);
@@ -322,6 +365,27 @@ function getClanok($link, $typ) {
                         ';
 
                 }
+            }
+        }
+    }
+}
+
+function editClanokText($link,$originalText,$novyText) {
+    $query = "SELECT * FROM články";
+    $result = mysqli_query($link, $query);
+    $poc_riadkov = mysqli_num_rows($result);
+    $i = 0;
+
+    if ($poc_riadkov > 0) {
+        while ($i <= $poc_riadkov) {
+            $i++;
+            $row = mysqli_fetch_array($result);
+            $prehladavanyText = $row['článok'];
+
+            if ($originalText == $prehladavanyText) {
+                $nazov = $row['názov'];
+                $query2 = "UPDATE články SET článok = '$novyText' WHERE názov = '$nazov' ";
+                $result2 = mysqli_query($link, $query2);
             }
         }
     }

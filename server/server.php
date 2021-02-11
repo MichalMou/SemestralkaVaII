@@ -312,9 +312,9 @@ function getClanok($link, $typ) {
                     var editor = document.getElementById('textUpraveny');
                     var subject = text.innerHTML;
                     
-                    subject = subject.replaceAll(new RegExp('<br />', 'gi'), 'n');
-                    subject = subject.replaceAll(new RegExp('<', 'gi'), '<');
-                    subject = subject.replaceAll(new RegExp('>', 'gi'), '>');
+                    subject = subject.replaceAll(new RegExp('<br />', 'g'), '/n');
+                    subject = subject.replaceAll(new RegExp('<', 'g'), '<');
+                    subject = subject.replaceAll(new RegExp('>', 'g'), '>');
                     editor.value = subject;
  
                     text.style.display = 'none';
@@ -327,21 +327,20 @@ function getClanok($link, $typ) {
                     var editor = document.getElementById('textUpraveny');
                     var subject = editor.value;
                     var original = text.innerHTML;
-                    console.log('$nazov');
+
                     $.ajax({
                     url: '../stranky/editText.php',
                     method: 'POST',
                     data: {nazov: '$nazov', subject: subject},
                     dataType: 'text',
                     success: function (data) {
-                        subject = subject.replaceAll(new RegExp('<', 'g'), '<');
-                        subject = subject.replaceAll(new RegExp('>', 'g'), '>');
-                        subject = subject.replaceAll(new RegExp('n', 'g'), '<br />');
-                        text.innerHTML = subject;
                         }
                     });                                          
 
-                    
+                        subject = subject.replaceAll(new RegExp('<', 'g'), '<');
+                        subject = subject.replaceAll(new RegExp('>', 'g'), '>');
+                        subject = subject.replaceAll(new RegExp('/n', 'g'), '<br />');
+                        text.innerHTML = subject;
                  
                     text.style.display = 'inline';
                     editorArea.style.display = 'none';

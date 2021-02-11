@@ -168,8 +168,6 @@ function getOsbneUdaje($link)
 
     $row = mysqli_fetch_array($result);
     $email = $row['email'];
-    $heslo = $row['password'];
-
 
     echo "
     <p id='osUdaje' class='textInfo'> 
@@ -177,8 +175,6 @@ function getOsbneUdaje($link)
     Email : $email <br/>
     </p>
     ";
-
-
 }
 
 function getObrazok($link, $typ)

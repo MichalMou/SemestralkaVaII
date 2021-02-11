@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="AJAX2-ok">
+      <change afterPath="$PROJECT_DIR$/stranky/update_osUdaje.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stranky/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/edit.php" afterDir="false" />
@@ -80,15 +81,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michal\Desktop\VAII\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\VAII" />
       <recent name="C:\xampp\htdocs\VAII\stranky\napoje" />
       <recent name="C:\xampp\htdocs\VAII\stranky\jedlo" />
       <recent name="C:\xampp\htdocs\VAII\header" />
       <recent name="C:\Users\Michal\Desktop\VAII\image" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Michal\Desktop\VAII\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,7 +133,7 @@
       <workItem from="1612514937359" duration="864000" />
       <workItem from="1612710873103" duration="27000" />
       <workItem from="1612964090368" duration="11568000" />
-      <workItem from="1613029930191" duration="30613000" />
+      <workItem from="1613029930191" duration="31974000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -379,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613067421184</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="AJAX2-ok">
+      <created>1613068328980</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1613068328980</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,21 +486,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="364" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610838397355" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1613054616459">
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1613069138637">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1613054616459" />
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1613069138637" />
     <state x="794" y="463" key="NewPhpFileDialog/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610715858134" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1610802575690">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="369" y="148" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606119400160" />
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610802575690" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613067431842">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613068330151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="442" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606119631283" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613067431842" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613068330151" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610733215187" />
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606071365009">
       <screen x="0" y="0" width="1920" height="1080" />

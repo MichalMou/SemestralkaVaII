@@ -33,7 +33,7 @@ include "../server/server.php"
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="newEmail">
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="newPassword">
         <div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="osUpdate()" name="edit">Edit</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="edit">Edit</button>
         </div>
     </form>
 

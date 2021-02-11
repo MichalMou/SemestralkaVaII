@@ -23,14 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="AJAX2-ok">
-      <change beforePath="$PROJECT_DIR$/dezerty/palacinky.php" beforeDir="false" afterPath="$PROJECT_DIR$/dezerty/palacinky.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dezerty/strudla.php" beforeDir="false" afterPath="$PROJECT_DIR$/dezerty/strudla.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dezerty/zmrzlina.php" beforeDir="false" afterPath="$PROJECT_DIR$/dezerty/zmrzlina.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedlo/kari.php" beforeDir="false" afterPath="$PROJECT_DIR$/jedlo/kari.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedlo/losos.php" beforeDir="false" afterPath="$PROJECT_DIR$/jedlo/losos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/napoje/kava.php" beforeDir="false" afterPath="$PROJECT_DIR$/napoje/kava.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/napoje/kofola.php" beforeDir="false" afterPath="$PROJECT_DIR$/napoje/kofola.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/napoje/pivo.php" beforeDir="false" afterPath="$PROJECT_DIR$/napoje/pivo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/edit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +132,7 @@
       <workItem from="1612514937359" duration="864000" />
       <workItem from="1612710873103" duration="27000" />
       <workItem from="1612964090368" duration="11568000" />
-      <workItem from="1613029930191" duration="29923000" />
+      <workItem from="1613029930191" duration="30613000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -377,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613067268732</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="AJAX2-ok">
+      <created>1613067421184</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1613067421184</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,11 +488,11 @@
     </state>
     <state x="369" y="148" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606119400160" />
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610802575690" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613067293503">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613067431842">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="442" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606119631283" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613067293503" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613067431842" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610733215187" />
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606071365009">
       <screen x="0" y="0" width="1920" height="1080" />

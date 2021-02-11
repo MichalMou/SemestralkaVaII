@@ -172,7 +172,7 @@ function getOsbneUdaje($link)
 
 
     echo "
-    <p class='textInfo'> 
+    <p id='osUdaje' class='textInfo'> 
     Meno : $login <br/>
     Email : $email <br/>
     </p>
@@ -341,9 +341,7 @@ function getClanokScrip() {
                  
                 text.style.display = 'inline';
                 editorArea.style.display = 'none';
-            }
-                        
-                        
+            }                
         </script>
     ";
 }
@@ -374,8 +372,6 @@ function getClanok($link, $typ)
                         <input name='submit' id='submit' type='button' value='Edit Text' onclick='doEdit($nazov)' />
                         </div>
                     ";
-
-                //getObrazokClanok($link, $nazov);
 
                 if ($_SESSION['login'] == "admin") {
                     echo "

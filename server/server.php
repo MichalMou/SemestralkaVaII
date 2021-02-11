@@ -300,12 +300,16 @@ function getClanok($link, $typ) {
                 $nazov = $row['názov'];
 
                 echo "
-                    <h1>$nadpis</h1>
-                    <div class='text_me' id='textClanku' onclick='toggleEditor()'>$text</div>
-                    <div id='editor'>
+                    <div id='clanok.$nazov'>
+                    
+
+                        <h1>$nadpis</h1>
+                        <div class='text_me' id='textClanku' onclick='toggleEditor()'>$text</div>
+                        <div id='editor'>
                         <textarea id='textUpraveny' name='ta1' rows='10' cols='50'></textarea><br />
                         <input name='submit' id='submit' type='button' value='Edit Text' onclick='doEdit()' />
-                    </div>
+                        </div>
+                    
                     <script>
                     function toggleEditor() {
                     var login = '$login';
@@ -331,7 +335,7 @@ function getClanok($link, $typ) {
                     var subject = editor.value;
 
                     $.ajax({
-                    url: '../stranky/editText.php',
+                    url: '../stranky/edit_text.php',
                     method: 'POST',
                     data: {nazov: '$nazov', subject: subject},
                     dataType: 'text',
@@ -351,16 +355,35 @@ function getClanok($link, $typ) {
                     </script>
                     ";
 
-                getObrazok($link, $nazov);
+                //getObrazokClanok($link, $nazov);
 
                 if ($_SESSION['login'] == "admin") {
-                    echo '
-                        <form class="form-signin"  method="post" action="<?php vymazatClanok($link,'.$nazov.');  ?>">
+                    echo "
+                        <form class='form-signin'  method='post'>
                             <div>
-                                <button class="btn btn-lg btn-primary btn-block" type="submit" name="deleteClanok">vymazať článok</button>
+                                <button class='btn btn-lg btn-primary btn-block' type='submit' name='deleteClanok' onclick='vymazClanok()'>vymazať článok</button>
                             </div>
                         </form>
-                        ';
+                        <script>
+                        function vymazClanok() {
+                            var clanok = document.getElementById('clanok.$nazov');
+                            clanok.style.display = 'none';
+                        
+                        $.ajax({
+                            url: '../stranky/vymaz_clanok.php',
+                            method: 'POST',
+                            data: {nazov: '$nazov'},
+                            dataType: 'text',
+                            success: function (data) {
+                                console.log('clanok vymazany');
+                                }
+                            });  
+                            
+                           
+                        }
+                        </script>
+                        </div>
+                        ";
 
                 }
             }
@@ -379,8 +402,7 @@ function editClanokText($link,$nazov,$novyText) {
             $i++;
             $row = mysqli_fetch_array($result);
             $prehladavanyText = $row['článok'];
-            $query3 = "INSERT INTO články(typ, názov, nadpis, článok) VALUES ('0','err','$nazov','err')";
-            $result3 = mysqli_query($link, $query3);
+
             if ($nazov == $row['názov']) {
                 $query2 = "UPDATE články SET článok = '$novyText' WHERE názov = '$nazov' ";
                 $result2 = mysqli_query($link, $query2);
@@ -390,25 +412,24 @@ function editClanokText($link,$nazov,$novyText) {
 }
 
 function vymazatClanok($link,$nazov) {
-    if (isset($_POST['deleteImg'])) {
-        $query = "SELECT * FROM články";
-        $result = mysqli_query($link, $query);
-        $poc_riadkov = mysqli_num_rows($result);
-        $i = 0;
+    $query = "SELECT * FROM články";
+    $result = mysqli_query($link, $query);
+    $poc_riadkov = mysqli_num_rows($result);
+    $i = 0;
 
-        if ($poc_riadkov > 0) {
-            while ($i < $poc_riadkov) {
-                $i++;
-                $row = mysqli_fetch_array($result);
-                $nazovClanok = $row['nazov'];
+    if ($poc_riadkov > 0) {
+        while ($i < $poc_riadkov) {
+            $i++;
+            $row = mysqli_fetch_array($result);
+            $nazovClanok = $row['názov'];
+            $query3 = "INSERT INTO články(typ, názov, nadpis, článok) VALUES ('0','err','$nazovClanok','$nazov')";
+            $result3 = mysqli_query($link, $query3);
 
-                if ($nazov == $nazovClanok) {
-                    $query2 = "DELETE FROM obrazky WHERE nazov = '$nazovClanok'";
-                    $result2 = mysqli_query($link, $query2);
-                }
+            if ($nazov == $nazovClanok) {
+                $query2 = "DELETE FROM články WHERE názov = '$nazovClanok'";
+                $result2 = mysqli_query($link, $query2);
             }
         }
-        exit();
     }
 }
 

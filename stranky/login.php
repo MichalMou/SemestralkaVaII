@@ -17,7 +17,7 @@ include "../server/server.php"
     <?php include('../header/header.php'); ?>
         <div class="gallery">
             <form class="form-signin" method="post" action="<?php login($link); ?>">
-                <h1 class="h3 mb-3 font-weight-normal textCent">Prosím prihlás sa</h1>
+                <h1 class="textCent ">Prosím prihlás sa</h1>
                 <input type="text" id="inputLogin" class="form-control" placeholder="Username" required autofocus name="username">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="loginPassword">
                 <div>

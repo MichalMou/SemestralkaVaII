@@ -57,7 +57,7 @@ include "../server/server.php"
 
 
             <div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name="pridajClanok">Pridaj článok</button>
+                <button class=" btn btn-lg btn-primary btn-block button" type="submit" name="pridajClanok">Pridaj článok</button>
             </div>
         </form>
     </div>

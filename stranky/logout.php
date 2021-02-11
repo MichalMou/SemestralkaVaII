@@ -17,7 +17,7 @@ include "../server/server.php"
 <?php include('../header/header.php'); ?>
 <div class="gallery">
     <form class="form-signin" method="post" action="<?php logout(); ?>">
-        <h1 class="h3 mb-3 font-weight-normal textCent">Chces sa odhlasit</h1>
+        <h1 class="textCent">Chces sa odhlasit</h1>
         <div>
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="logout">Odhlasit</button>
         </div>

@@ -19,7 +19,7 @@ include "../server/server.php"
 <div class="gallery">
 
     <div>
-        <h1 class="h3 mb-3 font-weight-normal textCent">Osobné údjaje</h1>
+        <h1 class="textCent">Osobné údjaje</h1>
         <div class="form-signin" >
             <?php getOsbneUdaje($link);?>
         </div>
@@ -29,7 +29,7 @@ include "../server/server.php"
 
 
     <form class="form-signin" method="post" action="<?php editAccount($link);  ?>">
-        <h1 class="h3 mb-3 font-weight-normal textCent">Edit</h1>
+        <h1 class="textCent">Edit</h1>
         <input type="text" id="inputLogin" class="form-control" placeholder="Nick" required autofocus name="newUsername">
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="newEmail">
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="newPassword">

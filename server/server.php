@@ -284,6 +284,7 @@ function vymazObrazok($link)
 }
 
 function getClanok($link, $typ) {
+    $login = $_SESSION['login'];
     $query = "SELECT * FROM články";
     $result = mysqli_query($link, $query);
     $i = 0;
@@ -297,6 +298,7 @@ function getClanok($link, $typ) {
                 $nadpis = $row['nadpis'];
                 $text = $row['článok'];
                 $nazov = $row['názov'];
+
                 echo "
                     <h1>$nadpis</h1>
                     <div class='text_me' id='textClanku' onclick='toggleEditor()'>$text</div>
@@ -306,19 +308,20 @@ function getClanok($link, $typ) {
                     </div>
                     <script>
                     function toggleEditor() {
-           
-                    var text = document.getElementById('textClanku');
-                    var editorArea = document.getElementById('editor');
-                    var editor = document.getElementById('textUpraveny');
-                    var subject = text.innerHTML;
-                    
-                    subject = subject.replaceAll(new RegExp('<br />', 'g'), '/n');
-                    subject = subject.replaceAll(new RegExp('<', 'g'), '<');
-                    subject = subject.replaceAll(new RegExp('>', 'g'), '>');
-                    editor.value = subject;
- 
-                    text.style.display = 'none';
-                    editorArea.style.display = 'inline';
+                    var login = '$login';
+                    if (login === 'admin') {
+                        var text = document.getElementById('textClanku');
+                        var editorArea = document.getElementById('editor');
+                        var editor = document.getElementById('textUpraveny');
+                        var subject = text.innerHTML;
+                            
+                        subject = subject.replaceAll(new RegExp('<br />', 'g'), '/n');
+                        subject = subject.replaceAll(new RegExp('<', 'g'), '<');
+                        subject = subject.replaceAll(new RegExp('>', 'g'), '>');
+                        editor.value = subject;
+                        text.style.display = 'none';
+                        editorArea.style.display = 'inline';
+                        } 
                     }
                     
                     function doEdit() {
@@ -326,7 +329,6 @@ function getClanok($link, $typ) {
                     var editorArea = document.getElementById('editor');
                     var editor = document.getElementById('textUpraveny');
                     var subject = editor.value;
-                    var original = text.innerHTML;
 
                     $.ajax({
                     url: '../stranky/editText.php',

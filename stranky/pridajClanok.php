@@ -52,7 +52,7 @@ include "../server/server.php"
 
             <div><label for="subject3">Článok</label></div>
             <div class="article-okno">
-                <textarea class="article-okno" id="subject3" name="textClanok" placeholder="Text článku.."></textarea>
+                <textarea class="article-okno " id="subject3" name="textClanok" placeholder="Text článku.."></textarea>
             </div>
 
 

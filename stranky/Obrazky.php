@@ -16,7 +16,7 @@ include "../server/server.php"
 <body>
 <?php include('../header/header.php'); ?>
 <div class="gallery">
-    <form class="form-signin" method="post" enctype="multipart/form-data"  action="<?php pridajObrazok($link); ?>">
+    <form class="form-signin form-obr" method="post" enctype="multipart/form-data"  action="<?php pridajObrazok($link); ?>">
 
 
         <h1 class="textCent">Pridaj obrázok</h1>

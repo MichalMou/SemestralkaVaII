@@ -57,8 +57,8 @@ a:hover {
 }
 
 .gallery {
-    /* dorobit responzivny dizajn */
-    background-color: rgba(43, 43, 43, 0.3);
+    padding-top: 50px;
+    background-color: rgba(63, 63, 63, 0.8);
     position: relative;
     top: 100px;
     margin-left: auto;
@@ -79,7 +79,7 @@ a:hover {
 
 
 .image {
-    overflow: auto;
+    overflow: hidden;
     margin: 1%;
     left: 13%;
     width: 35%;
@@ -137,7 +137,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px ;
-    width: 70vw;
+    width: 50vw;
     height: 300px;
 }
 
@@ -199,11 +199,17 @@ div#editor {
     display: none;
 }
 
+
 .form-signin {
+    font-size: larger;
+    font-weight: bolder;
     width: 100%;
     max-width: 400px;
     padding: 15px;
     margin: auto;
+}
+.form-obr {
+    margin-bottom: 80px;
 }
 .form-signin-text {
     max-width: 80vW;

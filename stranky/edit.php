@@ -24,9 +24,6 @@ include "../server/server.php"
         </div>
     </div>
 
-
-
-
     <form class="form-signin" method="post" action="<?php editAccount($link);  ?>">
         <h1 class="textCent">Edit</h1>
         <input type="text" id="inputLogin" class="form-control" placeholder="Nick" required autofocus name="newUsername">

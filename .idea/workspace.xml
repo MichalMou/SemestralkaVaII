@@ -24,7 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="AJAX">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jedlo/gulas.php" beforeDir="false" afterPath="$PROJECT_DIR$/jedlo/gulas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stranky/editText.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/editText.php" afterDir="false" />
     </list>
@@ -133,7 +132,7 @@
       <workItem from="1612514937359" duration="864000" />
       <workItem from="1612710873103" duration="27000" />
       <workItem from="1612964090368" duration="11568000" />
-      <workItem from="1613029930191" duration="9643000" />
+      <workItem from="1613029930191" duration="11817000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -324,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613042368417</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="AJAX">
+      <created>1613044324395</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613044324395</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -322,28 +322,26 @@ function getClanok($link, $typ) {
                     }
                     
                     function doEdit() {
-                        console.log('malo by sa nieco ukazat');
                     var text = document.getElementById('textClanku');
                     var editorArea = document.getElementById('editor');
                     var editor = document.getElementById('textUpraveny');
                     var subject = editor.value;
                     var original = text.innerHTML;
-                    
+                    console.log('$nazov');
                     $.ajax({
                     url: '../stranky/editText.php',
                     method: 'POST',
-                    data: {original: original, subject: subject},
+                    data: {nazov: '$nazov', subject: subject},
                     dataType: 'text',
                     success: function (data) {
-                        console.log(data);
-                        original.innerHTML = subject;
+                        subject = subject.replaceAll(new RegExp('<', 'g'), '<');
+                        subject = subject.replaceAll(new RegExp('>', 'g'), '>');
+                        subject = subject.replaceAll(new RegExp('n', 'g'), '<br />');
+                        text.innerHTML = subject;
                         }
                     });                                          
 
-                    subject = subject.replaceAll(new RegExp('<', 'g'), '<');
-                    subject = subject.replaceAll(new RegExp('>', 'g'), '>');
-                    subject = subject.replaceAll(new RegExp('n', 'g'), '<br />');
-                    text.innerHTML = subject;
+                    
                  
                     text.style.display = 'inline';
                     editorArea.style.display = 'none';
@@ -354,11 +352,8 @@ function getClanok($link, $typ) {
 
                 getObrazok($link, $nazov);
 
-
                 if ($_SESSION['login'] == "admin") {
                     echo '
-                    
-                    
                         <form class="form-signin"  method="post" action="<?php vymazatClanok($link,'.$nazov.');  ?>">
                             <div>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit" name="deleteClanok">vymazať článok</button>
@@ -372,7 +367,7 @@ function getClanok($link, $typ) {
     }
 }
 
-function editClanokText($link,$originalText,$novyText) {
+function editClanokText($link,$nazov,$novyText) {
     $query = "SELECT * FROM články";
     $result = mysqli_query($link, $query);
     $poc_riadkov = mysqli_num_rows($result);
@@ -383,9 +378,9 @@ function editClanokText($link,$originalText,$novyText) {
             $i++;
             $row = mysqli_fetch_array($result);
             $prehladavanyText = $row['článok'];
-
-            if ($originalText == $prehladavanyText) {
-                $nazov = $row['názov'];
+            $query3 = "INSERT INTO články(typ, názov, nadpis, článok) VALUES ('0','err','$nazov','err')";
+            $result3 = mysqli_query($link, $query3);
+            if ($nazov == $row['názov']) {
                 $query2 = "UPDATE články SET článok = '$novyText' WHERE názov = '$nazov' ";
                 $result2 = mysqli_query($link, $query2);
             }

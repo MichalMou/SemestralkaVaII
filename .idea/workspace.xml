@@ -22,10 +22,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="dynamic content">
-      <change afterPath="$PROJECT_DIR$/stranky/editText.php" afterDir="false" />
+    <list default="true" id="5a59c663-7cb8-4b15-abbb-624a07b436ea" name="Default Changelist" comment="AJAX">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jedlo/gulas.php" beforeDir="false" afterPath="$PROJECT_DIR$/jedlo/gulas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stranky/editText.php" beforeDir="false" afterPath="$PROJECT_DIR$/stranky/editText.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,7 @@
       <workItem from="1612514937359" duration="864000" />
       <workItem from="1612710873103" duration="27000" />
       <workItem from="1612964090368" duration="11568000" />
-      <workItem from="1613029930191" duration="7785000" />
+      <workItem from="1613029930191" duration="9643000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1603644233193</created>
@@ -316,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613030059238</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="AJAX">
+      <created>1613042368417</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613042368417</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +357,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="dynamic content" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamic content" />
+    <MESSAGE value="AJAX" />
+    <option name="LAST_COMMIT_MESSAGE" value="AJAX" />
   </component>
   <component name="WindowStateProjectService">
     <state x="475" y="75" key="#PHP" timestamp="1606119379763">
@@ -422,11 +431,11 @@
     </state>
     <state x="369" y="148" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606119400160" />
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610802575690" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613030062300">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1613042375559">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="442" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1606119631283" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613030062300" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1613042375559" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.538.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1610733215187" />
     <state x="127" y="244" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606071365009">
       <screen x="0" y="0" width="1920" height="1080" />

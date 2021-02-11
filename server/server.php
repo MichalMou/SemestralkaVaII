@@ -306,12 +306,13 @@ function getClanok($link, $typ) {
                     </div>
                     <script>
                     function toggleEditor() {
+           
                     var text = document.getElementById('textClanku');
                     var editorArea = document.getElementById('editor');
                     var editor = document.getElementById('textUpraveny');
                     var subject = text.innerHTML;
                     
-                    subject = subject.replaceAll(new RegExp('<br />', 'gi'), '\n');
+                    subject = subject.replaceAll(new RegExp('<br />', 'gi'), 'n');
                     subject = subject.replaceAll(new RegExp('<', 'gi'), '<');
                     subject = subject.replaceAll(new RegExp('>', 'gi'), '>');
                     editor.value = subject;
@@ -321,22 +322,23 @@ function getClanok($link, $typ) {
                     }
                     
                     function doEdit() {
+                        console.log('malo by sa nieco ukazat');
                     var text = document.getElementById('textClanku');
                     var editorArea = document.getElementById('editor');
                     var editor = document.getElementById('textUpraveny');
                     var subject = editor.value;
                     var original = text.innerHTML;
                     
-                     $.ajax({
-                     url: 'load_data.php',
-                     method: 'POST',
-                     data: {staryText: original, novyText: subject},
-                     dataType: 'text',
-                     success: function (data) {
+                    $.ajax({
+                    url: '../stranky/editText.php',
+                    method: 'POST',
+                    data: {original: original, subject: subject},
+                    dataType: 'text',
+                    success: function (data) {
                         console.log(data);
                         original.innerHTML = subject;
                         }
-                     });                                          
+                    });                                          
 
                     subject = subject.replaceAll(new RegExp('<', 'g'), '<');
                     subject = subject.replaceAll(new RegExp('>', 'g'), '>');
@@ -377,7 +379,7 @@ function editClanokText($link,$originalText,$novyText) {
     $i = 0;
 
     if ($poc_riadkov > 0) {
-        while ($i <= $poc_riadkov) {
+        while ($i < $poc_riadkov) {
             $i++;
             $row = mysqli_fetch_array($result);
             $prehladavanyText = $row['článok'];
@@ -399,7 +401,7 @@ function vymazatClanok($link,$nazov) {
         $i = 0;
 
         if ($poc_riadkov > 0) {
-            while ($i <= $poc_riadkov) {
+            while ($i < $poc_riadkov) {
                 $i++;
                 $row = mysqli_fetch_array($result);
                 $nazovClanok = $row['nazov'];
